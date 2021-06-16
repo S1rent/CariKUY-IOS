@@ -14,7 +14,7 @@ final class RegisterViewModel {
         let registerTrigger: Driver<Void>
         let emailRelay: Driver<String>
         let passwordRelay: Driver<String>
-        let genderRelay: Driver<String>
+        let roleRelay: Driver<String>
         let nameRelay: Driver<String>
     }
     
@@ -25,14 +25,14 @@ final class RegisterViewModel {
     
     public func transform(input: Input) -> Output {
         
-        let combinedData = Driver.combineLatest(input.emailRelay, input.passwordRelay, input.genderRelay, input.nameRelay)
+        let combinedData = Driver.combineLatest(input.emailRelay, input.passwordRelay, input.roleRelay, input.nameRelay)
         
         let message = input.registerTrigger.withLatestFrom(combinedData).map { data -> RegisterEnum in
             
-            let email = data.0
-            let password = data.1
-            let gender = data.2
-            let name = data.3
+            let email = data.0.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = data.1.trimmingCharacters(in: .whitespacesAndNewlines)
+            let role = data.2.trimmingCharacters(in: .whitespacesAndNewlines)
+            let name = data.3.trimmingCharacters(in: .whitespacesAndNewlines)
             
             if email == "" {
                 return RegisterEnum.errorEmptyEmail
@@ -50,11 +50,11 @@ final class RegisterViewModel {
                 return RegisterEnum.errorNameEmpty
             } else if password == "" {
                 return RegisterEnum.errorPasswordEmpty
-            } else if gender == "" {
-                return RegisterEnum.errorGenderEmpty
+            } else if role == "" {
+                return RegisterEnum.errorRoleEmpty
             }
             
-            return RegisterEnum.success
+            return self.createAccount(role: role, email: email, password: password, name: name)
         }
         
         let isSuccess = message.filter { $0 == .success }
@@ -71,6 +71,15 @@ final class RegisterViewModel {
             success: isSuccess,
             errorMessage: errorMessage
         )
+    }
+    
+    func createAccount(role: String, email: String, password: String, name: String) -> RegisterEnum {
+        if role.lowercased() == "seeker" {
+            let seeker: Seeker = SeekerFactory.shared.makeSeeker(id: generateID(), email: email, password: password, name: name, description: "-", profilePicture: "-", birthDate: "-", gender: "-")
+            return SeekerRepository.shared.createSeeker(userData: seeker)
+        } else {
+            return RegisterEnum.errorFatal
+        }
     }
     
     func generateID() -> String {

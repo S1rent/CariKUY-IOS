@@ -14,6 +14,7 @@ public enum RegisterEnum: String {
     case errorInvalidEmailFormat = "Please input a valid email format."
     case errorPasswordEmpty = "Password cannot be empty."
     case errorGenderEmpty = "Please select your gender."
+    case errorRoleEmpty = "Please select your role."
     case errorNameEmpty = "Name cannot be empty."
     case success = "Successfully created an account."
 }

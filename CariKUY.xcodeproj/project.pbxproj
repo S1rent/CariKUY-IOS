@@ -34,6 +34,7 @@
 		A1EA4A2A267A77B8002B89B8 /* HomeTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4A29267A77B8002B89B8 /* HomeTabBarViewModel.swift */; };
 		A1EA4A33267A7949002B89B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4A31267A7949002B89B8 /* HomeViewController.swift */; };
 		A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1EA4A32267A7949002B89B8 /* HomeViewController.xib */; };
+		A1EA4A4E267A7A9E002B89B8 /* SeekerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4A4D267A7A9E002B89B8 /* SeekerFactory.swift */; };
 		AB11D494F8D2A3543AF30B34 /* Pods_CariKUY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		A1EA4A29267A77B8002B89B8 /* HomeTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewModel.swift; sourceTree = "<group>"; };
 		A1EA4A31267A7949002B89B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A1EA4A32267A7949002B89B8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A1EA4A4D267A7A9E002B89B8 /* SeekerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekerFactory.swift; sourceTree = "<group>"; };
 		B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariKUY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -333,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				A1EA49E9267A617F002B89B8 /* Enum */,
+				A1EA4A4C267A7A93002B89B8 /* Factory */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -410,6 +413,14 @@
 				A1EA4A32267A7949002B89B8 /* HomeViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A1EA4A4C267A7A93002B89B8 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4A4D267A7A9E002B89B8 /* SeekerFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		A25A09978A36D37873E82CF3 /* Frameworks */ = {
@@ -681,6 +692,7 @@
 				A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */,
 				A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */,
 				A1EA4A33267A7949002B89B8 /* HomeViewController.swift in Sources */,
+				A1EA4A4E267A7A9E002B89B8 /* SeekerFactory.swift in Sources */,
 				A1EA4A2A267A77B8002B89B8 /* HomeTabBarViewModel.swift in Sources */,
 				A1EA49D5267A5B4D002B89B8 /* UIViewController+Ext.swift in Sources */,
 				A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */,

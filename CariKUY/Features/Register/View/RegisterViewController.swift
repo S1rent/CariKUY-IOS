@@ -16,14 +16,14 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var coverView: UIView!
-    @IBOutlet weak var maleCheckBox: UIImageView!
-    @IBOutlet weak var femaleCheckBox: UIImageView!
+    @IBOutlet weak var seekerCheckBox: UIImageView!
+    @IBOutlet weak var creatorCheckBox: UIImageView!
     
     let viewModel = RegisterViewModel()
     let disposeBag = DisposeBag()
     
     let registerRelay = PublishRelay<Void>()
-    let genderRelay = BehaviorRelay<String>(value: "")
+    let roleRelay = BehaviorRelay<String>(value: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class RegisterViewController: UIViewController {
                 registerTrigger: registerRelay.asDriverOnErrorJustComplete(),
                 emailRelay: self.emailField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300)),
                 passwordRelay: self.passwordField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300)),
-                genderRelay: self.genderRelay.asDriverOnErrorJustComplete(),
+                roleRelay: self.roleRelay.asDriverOnErrorJustComplete(),
                 nameRelay: self.nameField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300))
             )
         )
@@ -85,24 +85,23 @@ class RegisterViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
-    @IBAction func maleTapped(_ sender: Any) {
+    @IBAction func seekerTapped(_ sender: Any) {
         resetCheckBox()
-        maleCheckBox.image = UIImage(systemName: "circle.fill")
+        seekerCheckBox.image = UIImage(systemName: "circle.fill")
         
-        self.genderRelay.accept("Male")
+        self.roleRelay.accept("Seeker")
     }
-    
-    @IBAction func femaleTapped(_ sender: Any) {
-        resetCheckBox()
-        femaleCheckBox.image = UIImage(systemName: "circle.fill")
         
-        self.genderRelay.accept("Female")
+    @IBAction func creatorTapped(_ sender: Any) {
+        resetCheckBox()
+        creatorCheckBox.image = UIImage(systemName: "circle.fill")
+        
+        self.roleRelay.accept("Creator")
     }
     
     private func resetCheckBox() {
-        maleCheckBox.image = UIImage(systemName: "circle")
-        femaleCheckBox.image = UIImage(systemName: "circle")
+        seekerCheckBox.image = UIImage(systemName: "circle")
+        creatorCheckBox.image = UIImage(systemName: "circle")
     }
     
 }
