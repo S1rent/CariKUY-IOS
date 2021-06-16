@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CreatorEntity" representedClassName="CreatorEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="creatorDescription" optional="YES" attributeType="String"/>
+        <attribute name="creatorEmail" optional="YES" attributeType="String"/>
+        <attribute name="creatorID" optional="YES" attributeType="String"/>
+        <attribute name="creatorName" optional="YES" attributeType="String"/>
+        <attribute name="creatorPassword" optional="YES" attributeType="String"/>
+        <attribute name="creatorProfileImage" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SeekerEntity" representedClassName="SeekerEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="seekerBirthDate" optional="YES" attributeType="String"/>
+        <attribute name="seekerDescription" optional="YES" attributeType="String"/>
+        <attribute name="seekerEmail" optional="YES" attributeType="String"/>
+        <attribute name="seekerGender" optional="YES" attributeType="String"/>
+        <attribute name="seekerID" optional="YES" attributeType="String"/>
+        <attribute name="seekerName" optional="YES" attributeType="String"/>
+        <attribute name="seekerPassword" optional="YES" attributeType="String"/>
+        <attribute name="seekerProfileImage" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SeekerEntity" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="CreatorEntity" positionX="-54" positionY="-9" width="128" height="133"/>
+    </elements>
+</model>

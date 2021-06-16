@@ -17,4 +17,19 @@ extension UIViewController {
             delegate.setRootViewController(viewController: rootViewController)
         }
     }
+    
+    func presentViewController(
+        title: String,
+        message: String,
+        actions: [UIAlertAction],
+        completion: (() -> Void)?
+    ) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        for action in actions {
+            alertController.addAction(action)
+        }
+        
+        self.present(alertController, animated: true, completion: completion)
+    }
 }

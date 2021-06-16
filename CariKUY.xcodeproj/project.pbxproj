@@ -22,6 +22,18 @@
 		A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1EA49BD267A4B49002B89B8 /* RegisterViewController.xib */; };
 		A1EA49CD267A5553002B89B8 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49CC267A5553002B89B8 /* UIApplication+Ext.swift */; };
 		A1EA49D5267A5B4D002B89B8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49D4267A5B4D002B89B8 /* UIViewController+Ext.swift */; };
+		A1EA49DC267A60FC002B89B8 /* SeekerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49DB267A60FC002B89B8 /* SeekerRepository.swift */; };
+		A1EA49E4267A614C002B89B8 /* LoginEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49E3267A614C002B89B8 /* LoginEnum.swift */; };
+		A1EA49EB267A6190002B89B8 /* RegisterEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49EA267A6190002B89B8 /* RegisterEnum.swift */; };
+		A1EA49F1267A6253002B89B8 /* Seeker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49F0267A6253002B89B8 /* Seeker.swift */; };
+		A1EA49F9267A627E002B89B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49F8267A627E002B89B8 /* User.swift */; };
+		A1EA49FF267A6440002B89B8 /* SeekerEntityKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49FE267A6440002B89B8 /* SeekerEntityKey.swift */; };
+		A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4A14267A6B45002B89B8 /* RegisterViewModel.swift */; };
+		A1EA4A1A267A70DA002B89B8 /* ObservableType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4A19267A70DA002B89B8 /* ObservableType+Ext.swift */; };
+		A1EA4A20267A778B002B89B8 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4A1F267A778B002B89B8 /* HomeTabBarViewController.swift */; };
+		A1EA4A2A267A77B8002B89B8 /* HomeTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4A29267A77B8002B89B8 /* HomeTabBarViewModel.swift */; };
+		A1EA4A33267A7949002B89B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4A31267A7949002B89B8 /* HomeViewController.swift */; };
+		A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1EA4A32267A7949002B89B8 /* HomeViewController.xib */; };
 		AB11D494F8D2A3543AF30B34 /* Pods_CariKUY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +82,18 @@
 		A1EA49BD267A4B49002B89B8 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		A1EA49CC267A5553002B89B8 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		A1EA49D4267A5B4D002B89B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		A1EA49DB267A60FC002B89B8 /* SeekerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekerRepository.swift; sourceTree = "<group>"; };
+		A1EA49E3267A614C002B89B8 /* LoginEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEnum.swift; sourceTree = "<group>"; };
+		A1EA49EA267A6190002B89B8 /* RegisterEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEnum.swift; sourceTree = "<group>"; };
+		A1EA49F0267A6253002B89B8 /* Seeker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeker.swift; sourceTree = "<group>"; };
+		A1EA49F8267A627E002B89B8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A1EA49FE267A6440002B89B8 /* SeekerEntityKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekerEntityKey.swift; sourceTree = "<group>"; };
+		A1EA4A14267A6B45002B89B8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		A1EA4A19267A70DA002B89B8 /* ObservableType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Ext.swift"; sourceTree = "<group>"; };
+		A1EA4A1F267A778B002B89B8 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		A1EA4A29267A77B8002B89B8 /* HomeTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewModel.swift; sourceTree = "<group>"; };
+		A1EA4A31267A7949002B89B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A1EA4A32267A7949002B89B8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariKUY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,7 +150,6 @@
 		A1EA492C267A466F002B89B8 /* CariKUY */ = {
 			isa = PBXGroup;
 			children = (
-				A1EA4995267A49E4002B89B8 /* Core Data */,
 				A1EA498F267A49A3002B89B8 /* Delegate */,
 				A1EA498A267A4994002B89B8 /* Features */,
 				A1EA498B267A499B002B89B8 /* Internal */,
@@ -157,6 +180,8 @@
 		A1EA498A267A4994002B89B8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A1EA4A2E267A7938002B89B8 /* Home */,
+				A1EA4A1E267A7756002B89B8 /* HomeTabBar */,
 				A1EA4997267A49FF002B89B8 /* LaunchScreen */,
 				A1EA49B1267A4B0F002B89B8 /* Login */,
 				A1EA49B2267A4B14002B89B8 /* Register */,
@@ -167,7 +192,11 @@
 		A1EA498B267A499B002B89B8 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				A1EA4995267A49E4002B89B8 /* Core Data */,
+				A1EA49FD267A642B002B89B8 /* Enum */,
 				A1EA49CB267A5547002B89B8 /* Extension */,
+				A1EA49EF267A623D002B89B8 /* Model */,
+				A1EA49DA267A60E0002B89B8 /* Repository */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -216,6 +245,7 @@
 		A1EA49B1267A4B0F002B89B8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A1EA49E1267A613E002B89B8 /* Helper */,
 				A1EA49C7267A4B51002B89B8 /* ViewModel */,
 				A1EA49C6267A4B4D002B89B8 /* View */,
 			);
@@ -225,6 +255,7 @@
 		A1EA49B2267A4B14002B89B8 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				A1EA49E8267A617A002B89B8 /* Helper */,
 				A1EA49BA267A4B34002B89B8 /* View */,
 				A1EA49BB267A4B38002B89B8 /* ViewModel */,
 			);
@@ -243,6 +274,7 @@
 		A1EA49BB267A4B38002B89B8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A1EA4A14267A6B45002B89B8 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -268,8 +300,116 @@
 			children = (
 				A1EA49CC267A5553002B89B8 /* UIApplication+Ext.swift */,
 				A1EA49D4267A5B4D002B89B8 /* UIViewController+Ext.swift */,
+				A1EA4A19267A70DA002B89B8 /* ObservableType+Ext.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A1EA49DA267A60E0002B89B8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49DB267A60FC002B89B8 /* SeekerRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A1EA49E1267A613E002B89B8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49E2267A6143002B89B8 /* Enum */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A1EA49E2267A6143002B89B8 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49E3267A614C002B89B8 /* LoginEnum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		A1EA49E8267A617A002B89B8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49E9267A617F002B89B8 /* Enum */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A1EA49E9267A617F002B89B8 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49EA267A6190002B89B8 /* RegisterEnum.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		A1EA49EF267A623D002B89B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49F0267A6253002B89B8 /* Seeker.swift */,
+				A1EA49F8267A627E002B89B8 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1EA49FD267A642B002B89B8 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49FE267A6440002B89B8 /* SeekerEntityKey.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		A1EA4A1E267A7756002B89B8 /* HomeTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4A27267A77A4002B89B8 /* View */,
+				A1EA4A28267A77AA002B89B8 /* ViewModel */,
+			);
+			path = HomeTabBar;
+			sourceTree = "<group>";
+		};
+		A1EA4A27267A77A4002B89B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4A1F267A778B002B89B8 /* HomeTabBarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1EA4A28267A77AA002B89B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4A29267A77B8002B89B8 /* HomeTabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1EA4A2E267A7938002B89B8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4A30267A793F002B89B8 /* View */,
+				A1EA4A2F267A793B002B89B8 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A1EA4A2F267A793B002B89B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1EA4A30267A793F002B89B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4A31267A7949002B89B8 /* HomeViewController.swift */,
+				A1EA4A32267A7949002B89B8 /* HomeViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A25A09978A36D37873E82CF3 /* Frameworks */ = {
@@ -405,6 +545,7 @@
 			files = (
 				A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */,
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
+				A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */,
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
 				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
 			);
@@ -534,11 +675,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EA49DC267A60FC002B89B8 /* SeekerRepository.swift in Sources */,
+				A1EA49EB267A6190002B89B8 /* RegisterEnum.swift in Sources */,
+				A1EA49E4267A614C002B89B8 /* LoginEnum.swift in Sources */,
 				A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */,
 				A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */,
+				A1EA4A33267A7949002B89B8 /* HomeViewController.swift in Sources */,
+				A1EA4A2A267A77B8002B89B8 /* HomeTabBarViewModel.swift in Sources */,
 				A1EA49D5267A5B4D002B89B8 /* UIViewController+Ext.swift in Sources */,
 				A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */,
+				A1EA49F1267A6253002B89B8 /* Seeker.swift in Sources */,
+				A1EA49F9267A627E002B89B8 /* User.swift in Sources */,
+				A1EA4A1A267A70DA002B89B8 /* ObservableType+Ext.swift in Sources */,
+				A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */,
+				A1EA49FF267A6440002B89B8 /* SeekerEntityKey.swift in Sources */,
 				A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */,
+				A1EA4A20267A778B002B89B8 /* HomeTabBarViewController.swift in Sources */,
 				A1EA49CD267A5553002B89B8 /* UIApplication+Ext.swift in Sources */,
 				A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */,
 			);
