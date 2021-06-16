@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,13 +11,17 @@
 		9A3181D2154A99CA1682A670 /* Pods_CariKUYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7910CE71539FC097CAE318C3 /* Pods_CariKUYTests.framework */; };
 		A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492D267A466F002B89B8 /* AppDelegate.swift */; };
 		A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492F267A466F002B89B8 /* SceneDelegate.swift */; };
-		A1EA4932267A466F002B89B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4931267A466F002B89B8 /* ViewController.swift */; };
-		A1EA4935267A466F002B89B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EA4933267A466F002B89B8 /* Main.storyboard */; };
 		A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */; };
 		A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EA4939267A4670002B89B8 /* Assets.xcassets */; };
 		A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EA493B267A4670002B89B8 /* LaunchScreen.storyboard */; };
 		A1EA4948267A4670002B89B8 /* CariKUYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4947267A4670002B89B8 /* CariKUYTests.swift */; };
 		A1EA4953267A4670002B89B8 /* CariKUYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4952267A4670002B89B8 /* CariKUYUITests.swift */; };
+		A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49B3267A4B2B002B89B8 /* LoginViewController.swift */; };
+		A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1EA49B4267A4B2B002B89B8 /* LoginViewController.xib */; };
+		A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49BC267A4B49002B89B8 /* RegisterViewController.swift */; };
+		A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1EA49BD267A4B49002B89B8 /* RegisterViewController.xib */; };
+		A1EA49CD267A5553002B89B8 /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49CC267A5553002B89B8 /* UIApplication+Ext.swift */; };
+		A1EA49D5267A5B4D002B89B8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA49D4267A5B4D002B89B8 /* UIViewController+Ext.swift */; };
 		AB11D494F8D2A3543AF30B34 /* Pods_CariKUY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +54,6 @@
 		A1EA492A267A466F002B89B8 /* CariKUY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CariKUY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EA492D267A466F002B89B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EA492F267A466F002B89B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1EA4931267A466F002B89B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A1EA4934267A466F002B89B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1EA4937267A466F002B89B8 /* CariKUY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CariKUY.xcdatamodel; sourceTree = "<group>"; };
 		A1EA4939267A4670002B89B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1EA493C267A4670002B89B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,12 @@
 		A1EA494E267A4670002B89B8 /* CariKUYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CariKUYUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EA4952267A4670002B89B8 /* CariKUYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CariKUYUITests.swift; sourceTree = "<group>"; };
 		A1EA4954267A4670002B89B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1EA49B3267A4B2B002B89B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A1EA49B4267A4B2B002B89B8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A1EA49BC267A4B49002B89B8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A1EA49BD267A4B49002B89B8 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		A1EA49CC267A5553002B89B8 /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
+		A1EA49D4267A5B4D002B89B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariKUY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,14 +126,12 @@
 		A1EA492C267A466F002B89B8 /* CariKUY */ = {
 			isa = PBXGroup;
 			children = (
-				A1EA492D267A466F002B89B8 /* AppDelegate.swift */,
-				A1EA492F267A466F002B89B8 /* SceneDelegate.swift */,
-				A1EA4931267A466F002B89B8 /* ViewController.swift */,
-				A1EA4933267A466F002B89B8 /* Main.storyboard */,
-				A1EA4939267A4670002B89B8 /* Assets.xcassets */,
-				A1EA493B267A4670002B89B8 /* LaunchScreen.storyboard */,
-				A1EA493E267A4670002B89B8 /* Info.plist */,
-				A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */,
+				A1EA4995267A49E4002B89B8 /* Core Data */,
+				A1EA498F267A49A3002B89B8 /* Delegate */,
+				A1EA498A267A4994002B89B8 /* Features */,
+				A1EA498B267A499B002B89B8 /* Internal */,
+				A1EA4990267A49AF002B89B8 /* Plist */,
+				A1EA4996267A49F2002B89B8 /* Supporting Files */,
 			);
 			path = CariKUY;
 			sourceTree = "<group>";
@@ -148,6 +154,124 @@
 			path = CariKUYUITests;
 			sourceTree = "<group>";
 		};
+		A1EA498A267A4994002B89B8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4997267A49FF002B89B8 /* LaunchScreen */,
+				A1EA49B1267A4B0F002B89B8 /* Login */,
+				A1EA49B2267A4B14002B89B8 /* Register */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A1EA498B267A499B002B89B8 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49CB267A5547002B89B8 /* Extension */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		A1EA498F267A49A3002B89B8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA492D267A466F002B89B8 /* AppDelegate.swift */,
+				A1EA492F267A466F002B89B8 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		A1EA4990267A49AF002B89B8 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA493E267A4670002B89B8 /* Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		A1EA4995267A49E4002B89B8 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		A1EA4996267A49F2002B89B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4939267A4670002B89B8 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1EA4997267A49FF002B89B8 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA493B267A4670002B89B8 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		A1EA49B1267A4B0F002B89B8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49C7267A4B51002B89B8 /* ViewModel */,
+				A1EA49C6267A4B4D002B89B8 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A1EA49B2267A4B14002B89B8 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49BA267A4B34002B89B8 /* View */,
+				A1EA49BB267A4B38002B89B8 /* ViewModel */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A1EA49BA267A4B34002B89B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49BC267A4B49002B89B8 /* RegisterViewController.swift */,
+				A1EA49BD267A4B49002B89B8 /* RegisterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1EA49BB267A4B38002B89B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1EA49C6267A4B4D002B89B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49B3267A4B2B002B89B8 /* LoginViewController.swift */,
+				A1EA49B4267A4B2B002B89B8 /* LoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1EA49C7267A4B51002B89B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1EA49CB267A5547002B89B8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA49CC267A5553002B89B8 /* UIApplication+Ext.swift */,
+				A1EA49D4267A5B4D002B89B8 /* UIViewController+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A25A09978A36D37873E82CF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +292,6 @@
 				7BFB252068768C975BBDC79B /* Pods-CariKUYTests.debug.xcconfig */,
 				6D1D7CA54F1763AA7040054C /* Pods-CariKUYTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -282,7 +405,8 @@
 			files = (
 				A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */,
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
-				A1EA4935267A466F002B89B8 /* Main.storyboard in Resources */,
+				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
+				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,9 +534,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */,
+				A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */,
+				A1EA49D5267A5B4D002B89B8 /* UIViewController+Ext.swift in Sources */,
 				A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */,
-				A1EA4932267A466F002B89B8 /* ViewController.swift in Sources */,
 				A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */,
+				A1EA49CD267A5553002B89B8 /* UIApplication+Ext.swift in Sources */,
 				A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,14 +576,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A1EA4933267A466F002B89B8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1EA4934267A466F002B89B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A1EA493B267A4670002B89B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -592,7 +711,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KFYJQYMB2X;
-				INFOPLIST_FILE = CariKUY/Info.plist;
+				INFOPLIST_FILE = CariKUY/Plist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,7 +720,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CariKUY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -612,7 +732,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KFYJQYMB2X;
-				INFOPLIST_FILE = CariKUY/Info.plist;
+				INFOPLIST_FILE = CariKUY/Plist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,7 +741,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CariKUY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
