@@ -1,0 +1,6 @@
+framework module Pods_CariKUYTests {
+  umbrella header "Pods-CariKUYTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

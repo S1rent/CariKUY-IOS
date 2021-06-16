@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8336930C827D7F0584F15300 /* Pods_CariKUY_CariKUYUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1E3ACCE491801E431F5A66 /* Pods_CariKUY_CariKUYUITests.framework */; };
+		9A3181D2154A99CA1682A670 /* Pods_CariKUYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7910CE71539FC097CAE318C3 /* Pods_CariKUYTests.framework */; };
+		A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492D267A466F002B89B8 /* AppDelegate.swift */; };
+		A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492F267A466F002B89B8 /* SceneDelegate.swift */; };
+		A1EA4932267A466F002B89B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4931267A466F002B89B8 /* ViewController.swift */; };
+		A1EA4935267A466F002B89B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EA4933267A466F002B89B8 /* Main.storyboard */; };
+		A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */; };
+		A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EA4939267A4670002B89B8 /* Assets.xcassets */; };
+		A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EA493B267A4670002B89B8 /* LaunchScreen.storyboard */; };
+		A1EA4948267A4670002B89B8 /* CariKUYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4947267A4670002B89B8 /* CariKUYTests.swift */; };
+		A1EA4953267A4670002B89B8 /* CariKUYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4952267A4670002B89B8 /* CariKUYUITests.swift */; };
+		AB11D494F8D2A3543AF30B34 /* Pods_CariKUY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1EA4944267A4670002B89B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1EA4922267A466F002B89B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1EA4929267A466F002B89B8;
+			remoteInfo = CariKUY;
+		};
+		A1EA494F267A4670002B89B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1EA4922267A466F002B89B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1EA4929267A466F002B89B8;
+			remoteInfo = CariKUY;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A1E3ACCE491801E431F5A66 /* Pods_CariKUY_CariKUYUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariKUY_CariKUYUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A140DBA716CFC375350172 /* Pods-CariKUY-CariKUYUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUY-CariKUYUITests.debug.xcconfig"; path = "Target Support Files/Pods-CariKUY-CariKUYUITests/Pods-CariKUY-CariKUYUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		33681B224F0D91BEB3C188EA /* Pods-CariKUY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUY.debug.xcconfig"; path = "Target Support Files/Pods-CariKUY/Pods-CariKUY.debug.xcconfig"; sourceTree = "<group>"; };
+		3903DB93DA24D03CFA40DF91 /* Pods-CariKUY-CariKUYUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUY-CariKUYUITests.release.xcconfig"; path = "Target Support Files/Pods-CariKUY-CariKUYUITests/Pods-CariKUY-CariKUYUITests.release.xcconfig"; sourceTree = "<group>"; };
+		423CB3516D722C47EEEED41D /* Pods-CariKUY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUY.release.xcconfig"; path = "Target Support Files/Pods-CariKUY/Pods-CariKUY.release.xcconfig"; sourceTree = "<group>"; };
+		6D1D7CA54F1763AA7040054C /* Pods-CariKUYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUYTests.release.xcconfig"; path = "Target Support Files/Pods-CariKUYTests/Pods-CariKUYTests.release.xcconfig"; sourceTree = "<group>"; };
+		7910CE71539FC097CAE318C3 /* Pods_CariKUYTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariKUYTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BFB252068768C975BBDC79B /* Pods-CariKUYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUYTests.debug.xcconfig"; path = "Target Support Files/Pods-CariKUYTests/Pods-CariKUYTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1EA492A267A466F002B89B8 /* CariKUY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CariKUY.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EA492D267A466F002B89B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1EA492F267A466F002B89B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A1EA4931267A466F002B89B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A1EA4934267A466F002B89B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1EA4937267A466F002B89B8 /* CariKUY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CariKUY.xcdatamodel; sourceTree = "<group>"; };
+		A1EA4939267A4670002B89B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1EA493C267A4670002B89B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1EA493E267A4670002B89B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1EA4943267A4670002B89B8 /* CariKUYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CariKUYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EA4947267A4670002B89B8 /* CariKUYTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CariKUYTests.swift; sourceTree = "<group>"; };
+		A1EA4949267A4670002B89B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1EA494E267A4670002B89B8 /* CariKUYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CariKUYUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1EA4952267A4670002B89B8 /* CariKUYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CariKUYUITests.swift; sourceTree = "<group>"; };
+		A1EA4954267A4670002B89B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariKUY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1EA4927267A466F002B89B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB11D494F8D2A3543AF30B34 /* Pods_CariKUY.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EA4940267A4670002B89B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3181D2154A99CA1682A670 /* Pods_CariKUYTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EA494B267A4670002B89B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8336930C827D7F0584F15300 /* Pods_CariKUY_CariKUYUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1EA4921267A466F002B89B8 = {
+			isa = PBXGroup;
+			children = (
+				A1EA492C267A466F002B89B8 /* CariKUY */,
+				A1EA4946267A4670002B89B8 /* CariKUYTests */,
+				A1EA4951267A4670002B89B8 /* CariKUYUITests */,
+				A1EA492B267A466F002B89B8 /* Products */,
+				C82C2F2F145BD61A0263BD28 /* Pods */,
+				A25A09978A36D37873E82CF3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A1EA492B267A466F002B89B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA492A267A466F002B89B8 /* CariKUY.app */,
+				A1EA4943267A4670002B89B8 /* CariKUYTests.xctest */,
+				A1EA494E267A4670002B89B8 /* CariKUYUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1EA492C267A466F002B89B8 /* CariKUY */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA492D267A466F002B89B8 /* AppDelegate.swift */,
+				A1EA492F267A466F002B89B8 /* SceneDelegate.swift */,
+				A1EA4931267A466F002B89B8 /* ViewController.swift */,
+				A1EA4933267A466F002B89B8 /* Main.storyboard */,
+				A1EA4939267A4670002B89B8 /* Assets.xcassets */,
+				A1EA493B267A4670002B89B8 /* LaunchScreen.storyboard */,
+				A1EA493E267A4670002B89B8 /* Info.plist */,
+				A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */,
+			);
+			path = CariKUY;
+			sourceTree = "<group>";
+		};
+		A1EA4946267A4670002B89B8 /* CariKUYTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4947267A4670002B89B8 /* CariKUYTests.swift */,
+				A1EA4949267A4670002B89B8 /* Info.plist */,
+			);
+			path = CariKUYTests;
+			sourceTree = "<group>";
+		};
+		A1EA4951267A4670002B89B8 /* CariKUYUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4952267A4670002B89B8 /* CariKUYUITests.swift */,
+				A1EA4954267A4670002B89B8 /* Info.plist */,
+			);
+			path = CariKUYUITests;
+			sourceTree = "<group>";
+		};
+		A25A09978A36D37873E82CF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B702AC93DF2ED3F53979B571 /* Pods_CariKUY.framework */,
+				1A1E3ACCE491801E431F5A66 /* Pods_CariKUY_CariKUYUITests.framework */,
+				7910CE71539FC097CAE318C3 /* Pods_CariKUYTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C82C2F2F145BD61A0263BD28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33681B224F0D91BEB3C188EA /* Pods-CariKUY.debug.xcconfig */,
+				423CB3516D722C47EEEED41D /* Pods-CariKUY.release.xcconfig */,
+				24A140DBA716CFC375350172 /* Pods-CariKUY-CariKUYUITests.debug.xcconfig */,
+				3903DB93DA24D03CFA40DF91 /* Pods-CariKUY-CariKUYUITests.release.xcconfig */,
+				7BFB252068768C975BBDC79B /* Pods-CariKUYTests.debug.xcconfig */,
+				6D1D7CA54F1763AA7040054C /* Pods-CariKUYTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1EA4929267A466F002B89B8 /* CariKUY */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1EA4957267A4670002B89B8 /* Build configuration list for PBXNativeTarget "CariKUY" */;
+			buildPhases = (
+				D404B300A5A84285FFC46805 /* [CP] Check Pods Manifest.lock */,
+				A1EA4926267A466F002B89B8 /* Sources */,
+				A1EA4927267A466F002B89B8 /* Frameworks */,
+				A1EA4928267A466F002B89B8 /* Resources */,
+				6CFE70735DC4412AEC754DCE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CariKUY;
+			productName = CariKUY;
+			productReference = A1EA492A267A466F002B89B8 /* CariKUY.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1EA4942267A4670002B89B8 /* CariKUYTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1EA495A267A4670002B89B8 /* Build configuration list for PBXNativeTarget "CariKUYTests" */;
+			buildPhases = (
+				AB0EF90C109FA8D6B09387C5 /* [CP] Check Pods Manifest.lock */,
+				A1EA493F267A4670002B89B8 /* Sources */,
+				A1EA4940267A4670002B89B8 /* Frameworks */,
+				A1EA4941267A4670002B89B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1EA4945267A4670002B89B8 /* PBXTargetDependency */,
+			);
+			name = CariKUYTests;
+			productName = CariKUYTests;
+			productReference = A1EA4943267A4670002B89B8 /* CariKUYTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1EA494D267A4670002B89B8 /* CariKUYUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1EA495D267A4670002B89B8 /* Build configuration list for PBXNativeTarget "CariKUYUITests" */;
+			buildPhases = (
+				1071AD01DD3539488AACEE44 /* [CP] Check Pods Manifest.lock */,
+				A1EA494A267A4670002B89B8 /* Sources */,
+				A1EA494B267A4670002B89B8 /* Frameworks */,
+				A1EA494C267A4670002B89B8 /* Resources */,
+				03EE0FE64110807F87EE9941 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1EA4950267A4670002B89B8 /* PBXTargetDependency */,
+			);
+			name = CariKUYUITests;
+			productName = CariKUYUITests;
+			productReference = A1EA494E267A4670002B89B8 /* CariKUYUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1EA4922267A466F002B89B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					A1EA4929267A466F002B89B8 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					A1EA4942267A4670002B89B8 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = A1EA4929267A466F002B89B8;
+					};
+					A1EA494D267A4670002B89B8 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = A1EA4929267A466F002B89B8;
+					};
+				};
+			};
+			buildConfigurationList = A1EA4925267A466F002B89B8 /* Build configuration list for PBXProject "CariKUY" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1EA4921267A466F002B89B8;
+			productRefGroup = A1EA492B267A466F002B89B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1EA4929267A466F002B89B8 /* CariKUY */,
+				A1EA4942267A4670002B89B8 /* CariKUYTests */,
+				A1EA494D267A4670002B89B8 /* CariKUYUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1EA4928267A466F002B89B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */,
+				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
+				A1EA4935267A466F002B89B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EA4941267A4670002B89B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EA494C267A4670002B89B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03EE0FE64110807F87EE9941 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CariKUY-CariKUYUITests/Pods-CariKUY-CariKUYUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CariKUY-CariKUYUITests/Pods-CariKUY-CariKUYUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CariKUY-CariKUYUITests/Pods-CariKUY-CariKUYUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1071AD01DD3539488AACEE44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CariKUY-CariKUYUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CFE70735DC4412AEC754DCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CariKUY/Pods-CariKUY-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CariKUY/Pods-CariKUY-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CariKUY/Pods-CariKUY-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB0EF90C109FA8D6B09387C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CariKUYTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D404B300A5A84285FFC46805 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CariKUY-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1EA4926267A466F002B89B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */,
+				A1EA4932267A466F002B89B8 /* ViewController.swift in Sources */,
+				A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */,
+				A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EA493F267A4670002B89B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EA4948267A4670002B89B8 /* CariKUYTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1EA494A267A4670002B89B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EA4953267A4670002B89B8 /* CariKUYUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1EA4945267A4670002B89B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1EA4929267A466F002B89B8 /* CariKUY */;
+			targetProxy = A1EA4944267A4670002B89B8 /* PBXContainerItemProxy */;
+		};
+		A1EA4950267A4670002B89B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1EA4929267A466F002B89B8 /* CariKUY */;
+			targetProxy = A1EA494F267A4670002B89B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1EA4933267A466F002B89B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1EA4934267A466F002B89B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A1EA493B267A4670002B89B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1EA493C267A4670002B89B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1EA4955267A4670002B89B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1EA4956267A4670002B89B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1EA4958267A4670002B89B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33681B224F0D91BEB3C188EA /* Pods-CariKUY.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KFYJQYMB2X;
+				INFOPLIST_FILE = CariKUY/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CariKUY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1EA4959267A4670002B89B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 423CB3516D722C47EEEED41D /* Pods-CariKUY.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KFYJQYMB2X;
+				INFOPLIST_FILE = CariKUY/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CariKUY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1EA495B267A4670002B89B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BFB252068768C975BBDC79B /* Pods-CariKUYTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KFYJQYMB2X;
+				INFOPLIST_FILE = CariKUYTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CariKUYTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CariKUY.app/CariKUY";
+			};
+			name = Debug;
+		};
+		A1EA495C267A4670002B89B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D1D7CA54F1763AA7040054C /* Pods-CariKUYTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KFYJQYMB2X;
+				INFOPLIST_FILE = CariKUYTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CariKUYTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CariKUY.app/CariKUY";
+			};
+			name = Release;
+		};
+		A1EA495E267A4670002B89B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24A140DBA716CFC375350172 /* Pods-CariKUY-CariKUYUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KFYJQYMB2X;
+				INFOPLIST_FILE = CariKUYUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CariKUYUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CariKUY;
+			};
+			name = Debug;
+		};
+		A1EA495F267A4670002B89B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3903DB93DA24D03CFA40DF91 /* Pods-CariKUY-CariKUYUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KFYJQYMB2X;
+				INFOPLIST_FILE = CariKUYUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CariKUYUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CariKUY;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1EA4925267A466F002B89B8 /* Build configuration list for PBXProject "CariKUY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EA4955267A4670002B89B8 /* Debug */,
+				A1EA4956267A4670002B89B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1EA4957267A4670002B89B8 /* Build configuration list for PBXNativeTarget "CariKUY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EA4958267A4670002B89B8 /* Debug */,
+				A1EA4959267A4670002B89B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1EA495A267A4670002B89B8 /* Build configuration list for PBXNativeTarget "CariKUYTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EA495B267A4670002B89B8 /* Debug */,
+				A1EA495C267A4670002B89B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1EA495D267A4670002B89B8 /* Build configuration list for PBXNativeTarget "CariKUYUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EA495E267A4670002B89B8 /* Debug */,
+				A1EA495F267A4670002B89B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A1EA4937267A466F002B89B8 /* CariKUY.xcdatamodel */,
+			);
+			currentVersion = A1EA4937267A466F002B89B8 /* CariKUY.xcdatamodel */;
+			path = CariKUY.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A1EA4922267A466F002B89B8 /* Project object */;
+}
