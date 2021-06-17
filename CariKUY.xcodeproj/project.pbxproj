@@ -26,6 +26,17 @@
 		A1CB6D5E267B9D790040ACC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D5C267B9D790040ACC4 /* ProfileViewController.swift */; };
 		A1CB6D5F267B9D790040ACC4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CB6D5D267B9D790040ACC4 /* ProfileViewController.xib */; };
 		A1CB6D67267B9D890040ACC4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D66267B9D890040ACC4 /* ProfileViewModel.swift */; };
+		A1CB6D6D267BA7900040ACC4 /* ProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D6C267BA7900040ACC4 /* ProfileItemView.swift */; };
+		A1CB6D75267BA7FB0040ACC4 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D74267BA7FB0040ACC4 /* UIView+Ext.swift */; };
+		A1CB6D7A267BA8190040ACC4 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D79267BA8190040ACC4 /* UIStackView+Ext.swift */; };
+		A1CB6D7F267BA85F0040ACC4 /* ProfileItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CB6D7E267BA85F0040ACC4 /* ProfileItemView.xib */; };
+		A1CB6D85267BA9B50040ACC4 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D84267BA9B50040ACC4 /* ProfileModel.swift */; };
+		A1CB6D8E267BAE5E0040ACC4 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D8C267BAE5E0040ACC4 /* UpdateProfileViewController.swift */; };
+		A1CB6D8F267BAE5E0040ACC4 /* UpdateProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CB6D8D267BAE5E0040ACC4 /* UpdateProfileViewController.xib */; };
+		A1CB6D94267BB76C0040ACC4 /* UIScrollView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D93267BB76C0040ACC4 /* UIScrollView+Ext.swift */; };
+		A1CD05B6267BBAD00033ACED /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD05B5267BBAD00033ACED /* Date+Ext.swift */; };
+		A1CD05BB267BBDC50033ACED /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD05BA267BBDC50033ACED /* UpdateProfileViewModel.swift */; };
+		A1CD05C1267BC2430033ACED /* UpdateProfileEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD05C0267BC2430033ACED /* UpdateProfileEnum.swift */; };
 		A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492D267A466F002B89B8 /* AppDelegate.swift */; };
 		A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492F267A466F002B89B8 /* SceneDelegate.swift */; };
 		A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */; };
@@ -98,6 +109,17 @@
 		A1CB6D5C267B9D790040ACC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A1CB6D5D267B9D790040ACC4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		A1CB6D66267B9D890040ACC4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A1CB6D6C267BA7900040ACC4 /* ProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemView.swift; sourceTree = "<group>"; };
+		A1CB6D74267BA7FB0040ACC4 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		A1CB6D79267BA8190040ACC4 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
+		A1CB6D7E267BA85F0040ACC4 /* ProfileItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileItemView.xib; sourceTree = "<group>"; };
+		A1CB6D84267BA9B50040ACC4 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		A1CB6D8C267BAE5E0040ACC4 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
+		A1CB6D8D267BAE5E0040ACC4 /* UpdateProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateProfileViewController.xib; sourceTree = "<group>"; };
+		A1CB6D93267BB76C0040ACC4 /* UIScrollView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Ext.swift"; sourceTree = "<group>"; };
+		A1CD05B5267BBAD00033ACED /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		A1CD05BA267BBDC50033ACED /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
+		A1CD05C0267BC2430033ACED /* UpdateProfileEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileEnum.swift; sourceTree = "<group>"; };
 		A1EA492A267A466F002B89B8 /* CariKUY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CariKUY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EA492D267A466F002B89B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EA492F267A466F002B89B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +288,7 @@
 		A1CB6D59267B9D5E0040ACC4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A1CB6D83267BA9AC0040ACC4 /* Model */,
 				A1CB6D5B267B9D6A0040ACC4 /* View */,
 				A1CB6D5A267B9D650040ACC4 /* ViewModel */,
 			);
@@ -283,10 +306,63 @@
 		A1CB6D5B267B9D6A0040ACC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1CB6D6B267BA7830040ACC4 /* Item */,
 				A1CB6D5C267B9D790040ACC4 /* ProfileViewController.swift */,
 				A1CB6D5D267B9D790040ACC4 /* ProfileViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A1CB6D6B267BA7830040ACC4 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D6C267BA7900040ACC4 /* ProfileItemView.swift */,
+				A1CB6D7E267BA85F0040ACC4 /* ProfileItemView.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		A1CB6D83267BA9AC0040ACC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D84267BA9B50040ACC4 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1CB6D89267BAE1A0040ACC4 /* UpdateProfile */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD05BF267BC2370033ACED /* Helper */,
+				A1CB6D8B267BAE360040ACC4 /* View */,
+				A1CB6D8A267BAE310040ACC4 /* ViewModel */,
+			);
+			path = UpdateProfile;
+			sourceTree = "<group>";
+		};
+		A1CB6D8A267BAE310040ACC4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD05BA267BBDC50033ACED /* UpdateProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1CB6D8B267BAE360040ACC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D8C267BAE5E0040ACC4 /* UpdateProfileViewController.swift */,
+				A1CB6D8D267BAE5E0040ACC4 /* UpdateProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1CD05BF267BC2370033ACED /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD05C0267BC2430033ACED /* UpdateProfileEnum.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A1EA4921267A466F002B89B8 = {
@@ -351,6 +427,7 @@
 				A1CB6D59267B9D5E0040ACC4 /* Profile */,
 				A1EA49B2267A4B14002B89B8 /* Register */,
 				A1CB6D4F267B9C0F0040ACC4 /* RegistrationList */,
+				A1CB6D89267BAE1A0040ACC4 /* UpdateProfile */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -469,6 +546,10 @@
 				A1EA49CC267A5553002B89B8 /* UIApplication+Ext.swift */,
 				A1EA49D4267A5B4D002B89B8 /* UIViewController+Ext.swift */,
 				A1EA4A19267A70DA002B89B8 /* ObservableType+Ext.swift */,
+				A1CB6D74267BA7FB0040ACC4 /* UIView+Ext.swift */,
+				A1CB6D79267BA8190040ACC4 /* UIStackView+Ext.swift */,
+				A1CB6D93267BB76C0040ACC4 /* UIScrollView+Ext.swift */,
+				A1CD05B5267BBAD00033ACED /* Date+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -725,6 +806,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CB6D7F267BA85F0040ACC4 /* ProfileItemView.xib in Resources */,
 				A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */,
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
 				A1CB6D5F267B9D790040ACC4 /* ProfileViewController.xib in Resources */,
@@ -733,6 +815,7 @@
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
 				A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */,
 				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
+				A1CB6D8F267BAE5E0040ACC4 /* UpdateProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,9 +958,12 @@
 				A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */,
 				A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */,
 				A1CB6D25267B8D570040ACC4 /* CreatorEntityKey.swift in Sources */,
+				A1CB6D7A267BA8190040ACC4 /* UIStackView+Ext.swift in Sources */,
 				A1EA4A33267A7949002B89B8 /* HomeViewController.swift in Sources */,
 				A1EA4A4E267A7A9E002B89B8 /* SeekerFactory.swift in Sources */,
 				A1EA4A2A267A77B8002B89B8 /* HomeTabBarViewModel.swift in Sources */,
+				A1CD05B6267BBAD00033ACED /* Date+Ext.swift in Sources */,
+				A1CB6D8E267BAE5E0040ACC4 /* UpdateProfileViewController.swift in Sources */,
 				A1CB6D67267B9D890040ACC4 /* ProfileViewModel.swift in Sources */,
 				A1EA49D5267A5B4D002B89B8 /* UIViewController+Ext.swift in Sources */,
 				A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */,
@@ -885,12 +971,18 @@
 				A1EA49F9267A627E002B89B8 /* User.swift in Sources */,
 				A1EA4A1A267A70DA002B89B8 /* ObservableType+Ext.swift in Sources */,
 				A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */,
+				A1CB6D85267BA9B50040ACC4 /* ProfileModel.swift in Sources */,
 				A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */,
 				A1EA49FF267A6440002B89B8 /* SeekerEntityKey.swift in Sources */,
+				A1CD05BB267BBDC50033ACED /* UpdateProfileViewModel.swift in Sources */,
+				A1CB6D6D267BA7900040ACC4 /* ProfileItemView.swift in Sources */,
 				A1CB6D54267B9C700040ACC4 /* RegistrationListViewController.swift in Sources */,
 				A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */,
 				A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */,
 				A1EA4A20267A778B002B89B8 /* HomeTabBarViewController.swift in Sources */,
+				A1CD05C1267BC2430033ACED /* UpdateProfileEnum.swift in Sources */,
+				A1CB6D94267BB76C0040ACC4 /* UIScrollView+Ext.swift in Sources */,
+				A1CB6D75267BA7FB0040ACC4 /* UIView+Ext.swift in Sources */,
 				A1EA49CD267A5553002B89B8 /* UIApplication+Ext.swift in Sources */,
 				A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */,
 			);
