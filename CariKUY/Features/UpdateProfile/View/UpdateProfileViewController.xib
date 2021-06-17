@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdateProfileViewController" customModule="CariKUY" customModuleProvider="target">
             <connections>
-                <outlet property="currentPasswordField" destination="zmF-cv-wRL" id="Wh5-bS-6qd"/>
+                <outlet property="currentPasswordField" destination="ct0-fj-ekE" id="fiS-PF-WUr"/>
                 <outlet property="dateField" destination="aYC-jd-9u1" id="HE1-ZY-4mH"/>
                 <outlet property="descriptionField" destination="Cz1-Ek-Nrd" id="ter-ad-NJw"/>
                 <outlet property="editButton" destination="IE6-16-rZr" id="MuH-RL-8xd"/>
@@ -64,6 +64,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="emailEdit:" destination="-1" eventType="editingChanged" id="b1b-Lx-tkz"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,6 +96,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="nameEdit:" destination="-1" eventType="editingChanged" id="05p-yg-dVn"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -121,6 +127,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="descEdit:" destination="-1" eventType="editingChanged" id="LEO-kC-yrm"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -149,6 +158,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <action selector="phoneNumberEdit:" destination="-1" eventType="editingChanged" id="yLD-00-JAo"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -177,6 +189,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <connections>
+                                                        <action selector="newPasswordEdit:" destination="-1" eventType="editingChanged" id="mYV-Xc-wjO"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -376,6 +391,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <connections>
+                                                        <action selector="currentPasswordEdit:" destination="-1" eventType="editingChanged" id="dY0-bf-l2a"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

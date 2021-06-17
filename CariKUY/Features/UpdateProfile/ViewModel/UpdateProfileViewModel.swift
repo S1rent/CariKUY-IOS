@@ -41,7 +41,12 @@ final class UpdateProfileViewModel {
             ($0.0, $0.1, $0.2, $0.3, $0.4, $0.5, $0.6, $0.7, $1)
         }
         
+        finalData.drive(onNext: { _ in
+            print("")
+        })
+        
         let result = input.editTrigger.withLatestFrom(finalData).map { data -> UpdateProfileEnum in
+            
             let user = UserService.shared.getUser()
             let userRole = self.checkUserRole(user?.userEmail ?? "")
             
@@ -110,7 +115,7 @@ final class UpdateProfileViewModel {
         return Output(
             data: data,
             success: success,
-            error: error
+            erorr: error
         )
     }
     
@@ -118,7 +123,11 @@ final class UpdateProfileViewModel {
         if role.lowercased() == "seeker" {
             let seeker: Seeker = SeekerFactory.shared.makeSeeker(id: id, email: email, password: password, name: name, description: description, profilePicture: imageURL, birthDate: birthDate, gender: gender, phoneNumber: phoneNumber)
             
-            return SeekerRepository.shared.editSeeker(userData: seeker)
+            let result = SeekerRepository.shared.editSeeker(userData: seeker)
+            if result == .success {
+                UserService.shared.registerUserSession(data: seeker)
+            }
+            return result
         } else if role.lowercased() == "creator" {
 //            let creator: Creator = CreatorFactory.shared.makeCreator(id: generateID(), email: email, password: password, name: name, description: "-", profilePicture: "-")
 //

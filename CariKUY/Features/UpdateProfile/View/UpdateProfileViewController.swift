@@ -23,17 +23,26 @@ class UpdateProfileViewController: UIViewController {
     @IBOutlet weak var maleCheckBox: UIImageView!
     @IBOutlet weak var femaleCheckBox: UIImageView!
     @IBOutlet weak var dateField: UITextField!
-    @IBOutlet weak var currentPasswordField: UILabel!
+    @IBOutlet weak var currentPasswordField: UITextField!
     @IBOutlet weak var editButton: UIButton!
     
     let datePicker = UIDatePicker()
     let viewModel = UpdateProfileViewModel()
     
+    let disposeBag = DisposeBag()
+    
     let loadTrigger = BehaviorRelay<Void>(value: ())
     let editTrigger = PublishRelay<Void>()
+    
     let dateSelected = PublishRelay<String>()
     let genderTrigger = PublishRelay<String>()
     let imageTrigger = PublishRelay<String>()
+    let emailTrigger = PublishRelay<String>()
+    let nameTrigger = PublishRelay<String>()
+    let descTrigger = PublishRelay<String>()
+    let numberTrigger = PublishRelay<String>()
+    let newPasswordTrigger = PublishRelay<String>()
+    let passwordTrigger = PublishRelay<String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,21 +60,37 @@ class UpdateProfileViewController: UIViewController {
     }
     
     private func bindUI() {
+        
         let output = viewModel.transform(
             input: UpdateProfileViewModel.Input(
                 loadTrigger: self.loadTrigger.asDriverOnErrorJustComplete(),
-                emailTrigger: self.emailField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300)),
-                nameTrigger: self.nameField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300)),
-                descriptionTrigger: self.descriptionField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300)),
-                phoneNumberTrigger: self.phoneNumberField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300)),
-                newPasswordTrigger: self.passwordField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300)),
-                passwordTrigger: self.currentPasswordField.rx.text.orEmpty.asDriverOnErrorJustComplete().debounce(RxTimeInterval.milliseconds(300)),
+                emailTrigger: self.emailTrigger.asDriverOnErrorJustComplete(),
+                nameTrigger: self.nameTrigger.asDriverOnErrorJustComplete(),
+                descriptionTrigger: self.descTrigger.asDriverOnErrorJustComplete(),
+                phoneNumberTrigger: self.numberTrigger.asDriverOnErrorJustComplete(),
+                newPasswordTrigger: self.newPasswordTrigger.asDriverOnErrorJustComplete(),
+                passwordTrigger: self.passwordTrigger.asDriverOnErrorJustComplete(),
                 imageTrigger: self.imageTrigger.asDriverOnErrorJustComplete(),
                 genderTrigger: self.genderTrigger.asDriverOnErrorJustComplete(),
                 birthDateTrigger: self.dateSelected.asDriverOnErrorJustComplete(),
-                editTrigger: self.editTrigger.asDriverOnErrorJustComplete()
+                editTrigger: self.editButton.rx.tap.asDriverOnErrorJustComplete()
             )
         )
+        
+            self.emailTrigger.accept("")
+            self.nameTrigger.accept("")
+            self.descTrigger.accept("")
+            self.numberTrigger.accept("")
+            self.newPasswordTrigger.accept("")
+            self.passwordTrigger.accept("")
+            self.imageTrigger.accept("")
+            self.genderTrigger.accept("")
+            self.dateSelected.accept("")
+        
+        datePicker.rx.date.asDriver().drive(onNext:{ date in
+            self.dateField.text = date.formatDate(format: "dd MMMM yyyy")
+            self.dateSelected.accept(date.formatDate(format: "dd MMMM yyyy"))
+        }).disposed(by: self.rx.disposeBag)
         
         self.disposeBag.insert(
             output.data.drive(onNext: { [weak self] data in
@@ -76,8 +101,15 @@ class UpdateProfileViewController: UIViewController {
             output.success.drive(onNext: { [weak self] success in
                 guard let self = self else { return }
                 
-                if succ
+                self.presentPopUp(title: "Success", message: "Successfully edited your account.", actions: [UIAlertAction(title: "OK", style: .default, handler: { _ in 
+                    self.dismiss(animated: true, completion: nil)
+                })], completion: nil)
             }),
+            output.erorr.drive(onNext: { [weak self] message in
+                guard let self = self else { return }
+                
+                self.presentPopUp(title: "Error", message: message, actions: [UIAlertAction(title: "OK", style: .default, handler: nil)], completion: nil)
+            })
         )
     }
     
@@ -90,27 +122,30 @@ class UpdateProfileViewController: UIViewController {
             datePicker.preferredDatePickerStyle = .wheels
         }
         self.dateField.inputView = datePicker
-        
-        datePicker.rx.date.asDriver().skip(1).drive(onNext:{ date in
-            self.dateField.text = date.formatDate(format: "dd MMMM yyyy")
-            self.dateSelected.accept(date.formatDate(format: "dd MMMM yyyy"))
-        }).disposed(by: self.rx.disposeBag)
     }
     
     private func setData(_ data: ProfileModel) {
         self.emailField.text = data.profileEmail
+        self.emailTrigger.accept(data.profileEmail)
         self.nameField.text = data.profileName
+        self.nameTrigger.accept(data.profileName)
         self.descriptionField.text = data.profileDescription
+        self.descTrigger.accept(data.profileDescription)
+        
         if data.profileOtherItems.count != 0 {
             if data.profileOtherItems[0].1.lowercased() == "male" {
                 self.maleCheckBox.image = UIImage(systemName: "circle.fill")
             } else if data.profileOtherItems[0].1.lowercased() == "female" {
                 self.femaleCheckBox.image = UIImage(systemName: "circle.fill")
             }
+            self.genderTrigger.accept(data.profileOtherItems[0].1)
             self.phoneNumberField.text = data.profileOtherItems[2].1
+            self.numberTrigger.accept(data.profileOtherItems[2].1)
             self.dateField.text = data.profileOtherItems[1].1
+            self.dateSelected.accept(data.profileOtherItems[1].1)
         }
         self.profileImageField.text = data.profileImageURL
+        self.imageTrigger.accept(data.profileImageURL)
     }
     
     @IBAction func maleTapped(_ sender: Any) {
@@ -140,6 +175,29 @@ class UpdateProfileViewController: UIViewController {
         self.imageTrigger.accept(self.profileImageField.text ?? "")
     }
     
+    @IBAction func currentPasswordEdit(_ sender: Any) {
+        self.passwordTrigger.accept(self.currentPasswordField.text ?? "")
+    }
+    
+    @IBAction func newPasswordEdit(_ sender: Any) {
+        self.newPasswordTrigger.accept(self.passwordField.text ?? "")
+    }
+    
+    @IBAction func phoneNumberEdit(_ sender: Any) {
+        self.numberTrigger.accept(self.phoneNumberField.text ?? "")
+    }
+    
+    @IBAction func descEdit(_ sender: Any) {
+        self.descTrigger.accept(self.descriptionField.text ?? "")
+    }
+    
+    @IBAction func nameEdit(_ sender: Any) {
+        self.nameTrigger.accept(self.nameField.text ?? "")
+    }
+    
+    @IBAction func emailEdit(_ sender: Any) {
+        self.emailTrigger.accept(self.emailField.text ?? "")
+    }
     
     func resetCheckbox() {
         maleCheckBox.image = UIImage(systemName: "circle")
