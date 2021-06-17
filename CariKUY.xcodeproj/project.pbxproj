@@ -23,6 +23,9 @@
 		A1CB6D35267B993B0040ACC4 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D34267B993B0040ACC4 /* MenuService.swift */; };
 		A1CB6D54267B9C700040ACC4 /* RegistrationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D52267B9C700040ACC4 /* RegistrationListViewController.swift */; };
 		A1CB6D55267B9C700040ACC4 /* RegistrationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CB6D53267B9C700040ACC4 /* RegistrationListViewController.xib */; };
+		A1CB6D5E267B9D790040ACC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D5C267B9D790040ACC4 /* ProfileViewController.swift */; };
+		A1CB6D5F267B9D790040ACC4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CB6D5D267B9D790040ACC4 /* ProfileViewController.xib */; };
+		A1CB6D67267B9D890040ACC4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D66267B9D890040ACC4 /* ProfileViewModel.swift */; };
 		A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492D267A466F002B89B8 /* AppDelegate.swift */; };
 		A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492F267A466F002B89B8 /* SceneDelegate.swift */; };
 		A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */; };
@@ -92,6 +95,9 @@
 		A1CB6D34267B993B0040ACC4 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		A1CB6D52267B9C700040ACC4 /* RegistrationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationListViewController.swift; sourceTree = "<group>"; };
 		A1CB6D53267B9C700040ACC4 /* RegistrationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationListViewController.xib; sourceTree = "<group>"; };
+		A1CB6D5C267B9D790040ACC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A1CB6D5D267B9D790040ACC4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		A1CB6D66267B9D890040ACC4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A1EA492A267A466F002B89B8 /* CariKUY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CariKUY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EA492D267A466F002B89B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EA492F267A466F002B89B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +263,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A1CB6D59267B9D5E0040ACC4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D5B267B9D6A0040ACC4 /* View */,
+				A1CB6D5A267B9D650040ACC4 /* ViewModel */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A1CB6D5A267B9D650040ACC4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D66267B9D890040ACC4 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1CB6D5B267B9D6A0040ACC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D5C267B9D790040ACC4 /* ProfileViewController.swift */,
+				A1CB6D5D267B9D790040ACC4 /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A1EA4921267A466F002B89B8 = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +348,7 @@
 				A1CB6D05267B8AC20040ACC4 /* HomeCreator */,
 				A1EA4997267A49FF002B89B8 /* LaunchScreen */,
 				A1EA49B1267A4B0F002B89B8 /* Login */,
+				A1CB6D59267B9D5E0040ACC4 /* Profile */,
 				A1EA49B2267A4B14002B89B8 /* Register */,
 				A1CB6D4F267B9C0F0040ACC4 /* RegistrationList */,
 			);
@@ -694,6 +727,7 @@
 			files = (
 				A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */,
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
+				A1CB6D5F267B9D790040ACC4 /* ProfileViewController.xib in Resources */,
 				A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */,
 				A1CB6D55267B9C700040ACC4 /* RegistrationListViewController.xib in Resources */,
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
@@ -832,6 +866,7 @@
 				A1CB6D1A267B8D2B0040ACC4 /* CreatorRepository.swift in Sources */,
 				A1EA49EB267A6190002B89B8 /* RegisterEnum.swift in Sources */,
 				A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */,
+				A1CB6D5E267B9D790040ACC4 /* ProfileViewController.swift in Sources */,
 				A1EA49E4267A614C002B89B8 /* LoginEnum.swift in Sources */,
 				A1CB6D2D267B91120040ACC4 /* CreatorFactory.swift in Sources */,
 				A1CB6D35267B993B0040ACC4 /* MenuService.swift in Sources */,
@@ -843,6 +878,7 @@
 				A1EA4A33267A7949002B89B8 /* HomeViewController.swift in Sources */,
 				A1EA4A4E267A7A9E002B89B8 /* SeekerFactory.swift in Sources */,
 				A1EA4A2A267A77B8002B89B8 /* HomeTabBarViewModel.swift in Sources */,
+				A1CB6D67267B9D890040ACC4 /* ProfileViewModel.swift in Sources */,
 				A1EA49D5267A5B4D002B89B8 /* UIViewController+Ext.swift in Sources */,
 				A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */,
 				A1EA49F1267A6253002B89B8 /* Seeker.swift in Sources */,

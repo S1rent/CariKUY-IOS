@@ -70,7 +70,7 @@ class MenuService {
     
     func getProfileViewController() -> UIViewController {
         if let callback = self.callBack {
-            let viewController = HomeViewController(callback: callback)
+            let viewController = ProfileViewController(callback: callback)
             
             viewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 0)
             viewController.tabBarItem.imageInsets = UIEdgeInsets.init(top: -5, left: -5, bottom: -5, right: -5)

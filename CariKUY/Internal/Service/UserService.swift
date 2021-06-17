@@ -27,6 +27,7 @@ public class UserService {
     }
     
     func registerUserSession(data: User) {
+        self.logout()
         if var user = UserService.shared.getUser() {
             user.userID = data.userID
             user.userEmail = data.userEmail
@@ -39,7 +40,7 @@ public class UserService {
         } else {
             let user = AuthenticatedUser(
                 userID: data.userID,
-                userEmail: data.userPassword,
+                userEmail: data.userEmail,
                 userPassword: data.userPassword,
                 userName: data.userName,
                 userDescription: data.userDescription,

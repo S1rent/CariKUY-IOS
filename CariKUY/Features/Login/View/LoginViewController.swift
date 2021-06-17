@@ -56,6 +56,7 @@ class LoginViewController: UIViewController {
             }),
             output.isValid.drive(onNext: { [weak self] valid in
                 guard let self = self else { return }
+                print("VALID \(valid)")
                 switch valid {
                 case 0:
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: { [weak self] in
@@ -78,6 +79,7 @@ class LoginViewController: UIViewController {
         let user = UserService.shared.getUser()
         
         if let userData = user {
+            print("EMAIL \(userData.userEmail)")
             self.userDataTrigger.accept(userData.userEmail ?? "")
         }
     }
