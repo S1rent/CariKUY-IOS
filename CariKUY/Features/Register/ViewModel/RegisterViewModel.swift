@@ -19,7 +19,7 @@ final class RegisterViewModel {
     }
     
     struct Output {
-        let success: Driver<Bool>
+        let success: Driver<RegisterEnum>
         let errorMessage: Driver<String>
     }
     
@@ -57,13 +57,9 @@ final class RegisterViewModel {
             return self.createAccount(role: role, email: email, password: password, name: name)
         }
         
-        let isSuccess = message.filter { $0 == .success }
-                        .map { _ in
-                            return true
-                        }
+        let isSuccess = message.filter { $0 == .successSeeker || $0 == .successCreator }.map { $0 }
         
-        let errorMessage = message.filter { $0 != .success }
-                           .map {
+        let errorMessage = message.filter { $0 != .successSeeker && $0 != .successCreator }.map {
                                $0.rawValue
                            }
         
@@ -75,11 +71,17 @@ final class RegisterViewModel {
     
     func createAccount(role: String, email: String, password: String, name: String) -> RegisterEnum {
         if role.lowercased() == "seeker" {
-            let seeker: Seeker = SeekerFactory.shared.makeSeeker(id: generateID(), email: email, password: password, name: name, description: "-", profilePicture: "-", birthDate: "-", gender: "-")
+            let seeker: Seeker = SeekerFactory.shared.makeSeeker(id: generateID(), email: email, password: password, name: name, description: "-", profilePicture: "-", birthDate: "-", gender: "-", phoneNumber: "-")
+            
+            UserService.shared.registerUserSession(data: seeker)
             return SeekerRepository.shared.createSeeker(userData: seeker)
-        } else {
-            return RegisterEnum.errorFatal
+        } else if role.lowercased() == "creator" {
+            let creator: Creator = CreatorFactory.shared.makeCreator(id: generateID(), email: email, password: password, name: name, description: "-", profilePicture: "-")
+            
+            UserService.shared.registerUserSession(data: creator)
+            return CreatorRepository.shared.createCreator(userData: creator)
         }
+        return RegisterEnum.errorFatal
     }
     
     func generateID() -> String {
@@ -88,6 +90,11 @@ final class RegisterViewModel {
     
     func checkEmailExist(_ email: String) -> Bool {
         let seekerList = SeekerRepository.shared.getSeekersByEmail(email: email)
-        return seekerList.count != 0 ? true : false
+        let creatorList = CreatorRepository.shared.getCreatorsByEmail(email: email)
+        
+        if seekerList.count == 0 && creatorList.count == 0 {
+            return false
+        }
+        return true
     }
 }

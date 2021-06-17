@@ -16,10 +16,11 @@
         <attribute name="seekerID" optional="YES" attributeType="String"/>
         <attribute name="seekerName" optional="YES" attributeType="String"/>
         <attribute name="seekerPassword" optional="YES" attributeType="String"/>
+        <attribute name="seekerPhoneNumber" optional="YES" attributeType="String"/>
         <attribute name="seekerProfileImage" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="SeekerEntity" positionX="-63" positionY="-18" width="128" height="163"/>
         <element name="CreatorEntity" positionX="-54" positionY="-9" width="128" height="133"/>
+        <element name="SeekerEntity" positionX="-63" positionY="-18" width="128" height="178"/>
     </elements>
 </model>

@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		8336930C827D7F0584F15300 /* Pods_CariKUY_CariKUYUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1E3ACCE491801E431F5A66 /* Pods_CariKUY_CariKUYUITests.framework */; };
 		9A3181D2154A99CA1682A670 /* Pods_CariKUYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7910CE71539FC097CAE318C3 /* Pods_CariKUYTests.framework */; };
+		A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BF8267B43DA0040ACC4 /* UserService.swift */; };
+		A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */; };
+		A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */; };
+		A1CB6CFC267B8A850040ACC4 /* HomeCreatorTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6CFB267B8A850040ACC4 /* HomeCreatorTabBarViewController.swift */; };
+		A1CB6D01267B8AA70040ACC4 /* HomeCreatorTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D00267B8AA70040ACC4 /* HomeCreatorTabBarViewModel.swift */; };
+		A1CB6D0B267B8AF50040ACC4 /* HomeCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D09267B8AF50040ACC4 /* HomeCreatorViewController.swift */; };
+		A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CB6D0A267B8AF50040ACC4 /* HomeCreatorViewController.xib */; };
+		A1CB6D15267B8CA70040ACC4 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D14267B8CA70040ACC4 /* Creator.swift */; };
+		A1CB6D1A267B8D2B0040ACC4 /* CreatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D19267B8D2B0040ACC4 /* CreatorRepository.swift */; };
+		A1CB6D25267B8D570040ACC4 /* CreatorEntityKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D24267B8D570040ACC4 /* CreatorEntityKey.swift */; };
+		A1CB6D2D267B91120040ACC4 /* CreatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D2C267B91120040ACC4 /* CreatorFactory.swift */; };
 		A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492D267A466F002B89B8 /* AppDelegate.swift */; };
 		A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492F267A466F002B89B8 /* SceneDelegate.swift */; };
 		A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */; };
@@ -64,6 +75,17 @@
 		6D1D7CA54F1763AA7040054C /* Pods-CariKUYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUYTests.release.xcconfig"; path = "Target Support Files/Pods-CariKUYTests/Pods-CariKUYTests.release.xcconfig"; sourceTree = "<group>"; };
 		7910CE71539FC097CAE318C3 /* Pods_CariKUYTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariKUYTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFB252068768C975BBDC79B /* Pods-CariKUYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUYTests.debug.xcconfig"; path = "Target Support Files/Pods-CariKUYTests/Pods-CariKUYTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1CB6BF8267B43DA0040ACC4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
+		A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A1CB6CFB267B8A850040ACC4 /* HomeCreatorTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreatorTabBarViewController.swift; sourceTree = "<group>"; };
+		A1CB6D00267B8AA70040ACC4 /* HomeCreatorTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreatorTabBarViewModel.swift; sourceTree = "<group>"; };
+		A1CB6D09267B8AF50040ACC4 /* HomeCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreatorViewController.swift; sourceTree = "<group>"; };
+		A1CB6D0A267B8AF50040ACC4 /* HomeCreatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCreatorViewController.xib; sourceTree = "<group>"; };
+		A1CB6D14267B8CA70040ACC4 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
+		A1CB6D19267B8D2B0040ACC4 /* CreatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorRepository.swift; sourceTree = "<group>"; };
+		A1CB6D24267B8D570040ACC4 /* CreatorEntityKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorEntityKey.swift; sourceTree = "<group>"; };
+		A1CB6D2C267B91120040ACC4 /* CreatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorFactory.swift; sourceTree = "<group>"; };
 		A1EA492A267A466F002B89B8 /* CariKUY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CariKUY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EA492D267A466F002B89B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EA492F267A466F002B89B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +149,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1CB6BF7267B43BF0040ACC4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6BF8267B43DA0040ACC4 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A1CB6CF8267B8A560040ACC4 /* HomeCreatorTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6CFA267B8A650040ACC4 /* View */,
+				A1CB6CF9267B8A600040ACC4 /* ViewModel */,
+			);
+			path = HomeCreatorTabBar;
+			sourceTree = "<group>";
+		};
+		A1CB6CF9267B8A600040ACC4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D00267B8AA70040ACC4 /* HomeCreatorTabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1CB6CFA267B8A650040ACC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6CFB267B8A850040ACC4 /* HomeCreatorTabBarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1CB6D05267B8AC20040ACC4 /* HomeCreator */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D06267B8AD30040ACC4 /* HomeCreator */,
+				A1CB6CF8267B8A560040ACC4 /* HomeCreatorTabBar */,
+			);
+			path = HomeCreator;
+			sourceTree = "<group>";
+		};
+		A1CB6D06267B8AD30040ACC4 /* HomeCreator */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D07267B8ADA0040ACC4 /* View */,
+				A1CB6D08267B8ADE0040ACC4 /* ViewModel */,
+			);
+			path = HomeCreator;
+			sourceTree = "<group>";
+		};
+		A1CB6D07267B8ADA0040ACC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D09267B8AF50040ACC4 /* HomeCreatorViewController.swift */,
+				A1CB6D0A267B8AF50040ACC4 /* HomeCreatorViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1CB6D08267B8ADE0040ACC4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1CB6D10267B8B080040ACC4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA4A30267A793F002B89B8 /* View */,
+				A1EA4A2F267A793B002B89B8 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		A1EA4921267A466F002B89B8 = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				A1EA4A2E267A7938002B89B8 /* Home */,
-				A1EA4A1E267A7756002B89B8 /* HomeTabBar */,
+				A1CB6D05267B8AC20040ACC4 /* HomeCreator */,
 				A1EA4997267A49FF002B89B8 /* LaunchScreen */,
 				A1EA49B1267A4B0F002B89B8 /* Login */,
 				A1EA49B2267A4B14002B89B8 /* Register */,
@@ -199,6 +297,7 @@
 				A1EA49CB267A5547002B89B8 /* Extension */,
 				A1EA49EF267A623D002B89B8 /* Model */,
 				A1EA49DA267A60E0002B89B8 /* Repository */,
+				A1CB6BF7267B43BF0040ACC4 /* Service */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -248,8 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				A1EA49E1267A613E002B89B8 /* Helper */,
-				A1EA49C7267A4B51002B89B8 /* ViewModel */,
 				A1EA49C6267A4B4D002B89B8 /* View */,
+				A1EA49C7267A4B51002B89B8 /* ViewModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -293,6 +392,7 @@
 		A1EA49C7267A4B51002B89B8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -310,6 +410,7 @@
 		A1EA49DA267A60E0002B89B8 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A1CB6D19267B8D2B0040ACC4 /* CreatorRepository.swift */,
 				A1EA49DB267A60FC002B89B8 /* SeekerRepository.swift */,
 			);
 			path = Repository;
@@ -351,6 +452,8 @@
 		A1EA49EF267A623D002B89B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */,
+				A1CB6D14267B8CA70040ACC4 /* Creator.swift */,
 				A1EA49F0267A6253002B89B8 /* Seeker.swift */,
 				A1EA49F8267A627E002B89B8 /* User.swift */,
 			);
@@ -360,6 +463,7 @@
 		A1EA49FD267A642B002B89B8 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				A1CB6D24267B8D570040ACC4 /* CreatorEntityKey.swift */,
 				A1EA49FE267A6440002B89B8 /* SeekerEntityKey.swift */,
 			);
 			path = Enum;
@@ -393,8 +497,8 @@
 		A1EA4A2E267A7938002B89B8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A1EA4A30267A793F002B89B8 /* View */,
-				A1EA4A2F267A793B002B89B8 /* ViewModel */,
+				A1CB6D10267B8B080040ACC4 /* Home */,
+				A1EA4A1E267A7756002B89B8 /* HomeTabBar */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -418,6 +522,7 @@
 		A1EA4A4C267A7A93002B89B8 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				A1CB6D2C267B91120040ACC4 /* CreatorFactory.swift */,
 				A1EA4A4D267A7A9E002B89B8 /* SeekerFactory.swift */,
 			);
 			path = Factory;
@@ -558,6 +663,7 @@
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
 				A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */,
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
+				A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */,
 				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,11 +792,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CB6D01267B8AA70040ACC4 /* HomeCreatorTabBarViewModel.swift in Sources */,
 				A1EA49DC267A60FC002B89B8 /* SeekerRepository.swift in Sources */,
+				A1CB6CFC267B8A850040ACC4 /* HomeCreatorTabBarViewController.swift in Sources */,
+				A1CB6D1A267B8D2B0040ACC4 /* CreatorRepository.swift in Sources */,
 				A1EA49EB267A6190002B89B8 /* RegisterEnum.swift in Sources */,
+				A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */,
 				A1EA49E4267A614C002B89B8 /* LoginEnum.swift in Sources */,
+				A1CB6D2D267B91120040ACC4 /* CreatorFactory.swift in Sources */,
+				A1CB6D15267B8CA70040ACC4 /* Creator.swift in Sources */,
+				A1CB6D0B267B8AF50040ACC4 /* HomeCreatorViewController.swift in Sources */,
 				A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */,
 				A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */,
+				A1CB6D25267B8D570040ACC4 /* CreatorEntityKey.swift in Sources */,
 				A1EA4A33267A7949002B89B8 /* HomeViewController.swift in Sources */,
 				A1EA4A4E267A7A9E002B89B8 /* SeekerFactory.swift in Sources */,
 				A1EA4A2A267A77B8002B89B8 /* HomeTabBarViewModel.swift in Sources */,
@@ -699,9 +813,11 @@
 				A1EA49F1267A6253002B89B8 /* Seeker.swift in Sources */,
 				A1EA49F9267A627E002B89B8 /* User.swift in Sources */,
 				A1EA4A1A267A70DA002B89B8 /* ObservableType+Ext.swift in Sources */,
+				A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */,
 				A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */,
 				A1EA49FF267A6440002B89B8 /* SeekerEntityKey.swift in Sources */,
 				A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */,
+				A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */,
 				A1EA4A20267A778B002B89B8 /* HomeTabBarViewController.swift in Sources */,
 				A1EA49CD267A5553002B89B8 /* UIApplication+Ext.swift in Sources */,
 				A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */,

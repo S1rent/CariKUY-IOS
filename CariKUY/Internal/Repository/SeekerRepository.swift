@@ -28,6 +28,7 @@ class SeekerRepository {
             create.setValue(userData.userDescription, forKey: SeekerEntityKey.description.rawValue)
             create.setValue(userData.seekerGender, forKey: SeekerEntityKey.gender.rawValue)
             create.setValue(userData.userProfilePicture, forKey: SeekerEntityKey.profilePicture.rawValue)
+            create.setValue(userData.seekerPhoneNumber, forKey: SeekerEntityKey.phoneNumber.rawValue)
             
             do {
                 try managedContext.save()
@@ -35,7 +36,7 @@ class SeekerRepository {
                 return RegisterEnum.errorFatal
             }
         }
-        return RegisterEnum.success
+        return RegisterEnum.successSeeker
     }
     
     func getSeekersByEmail(email: String) -> [Seeker] {
@@ -56,7 +57,8 @@ class SeekerRepository {
                     name: user.value(forKey: SeekerEntityKey.name.rawValue) as? String ?? "-",
                     description: user.value(forKey: SeekerEntityKey.description.rawValue) as? String ?? "-",
                     profilePicture: user.value(forKey: SeekerEntityKey.profilePicture.rawValue) as? String ?? "-", birthDate: user.value(forKey: SeekerEntityKey.birthDate.rawValue) as? String ?? "-",
-                    gender: user.value(forKey: SeekerEntityKey.gender.rawValue) as? String ?? "-"
+                    gender: user.value(forKey: SeekerEntityKey.gender.rawValue) as? String ?? "-",
+                    phoneNumber: user.value(forKey: SeekerEntityKey.phoneNumber.rawValue) as? String ?? "-"
                 )
                 seekerList.append(model)
             }

@@ -47,16 +47,20 @@ class RegisterViewController: UIViewController {
             output.success.drive(onNext: { [weak self] success in
                 guard let self = self else { return }
                 
-                if success {
-                    self.presentViewController(title: "Success", message: "Successfully created an account.", actions: [UIAlertAction(title: "OK", style: .default, handler: { _ in
+                if success == .successSeeker {
+                    self.presentPopUp(title: "Success", message: "Successfully created an account.", actions: [UIAlertAction(title: "OK", style: .default, handler: { _ in
                         self.navigateAndSetRootViewController(viewController: HomeTabBarViewController())
+                    })], completion: nil)
+                } else if success == .successCreator {
+                    self.presentPopUp(title: "Success", message: "Successfully created an account.", actions: [UIAlertAction(title: "OK", style: .default, handler: { _ in
+                        self.navigateAndSetRootViewController(viewController: HomeCreatorTabBarViewController())
                     })], completion: nil)
                 }
             }),
             output.errorMessage.drive(onNext: { [weak self] message in
                 guard let self = self else { return }
                 
-                self.presentViewController(title: "Error", message: message, actions: [UIAlertAction(title: "OK", style: .default, handler: nil)], completion: nil)
+                self.presentPopUp(title: "Error", message: message, actions: [UIAlertAction(title: "OK", style: .default, handler: nil)], completion: nil)
             })
         )
     }

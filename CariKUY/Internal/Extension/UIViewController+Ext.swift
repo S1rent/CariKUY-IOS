@@ -18,7 +18,7 @@ extension UIViewController {
         }
     }
     
-    func presentViewController(
+    func presentPopUp(
         title: String,
         message: String,
         actions: [UIAlertAction],

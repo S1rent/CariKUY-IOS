@@ -17,4 +17,5 @@ public enum SeekerEntityKey: String {
     case name = "seekerName"
     case password = "seekerPassword"
     case profilePicture = "seekerProfileImage"
+    case phoneNumber = "seekerPhoneNumber"
 }

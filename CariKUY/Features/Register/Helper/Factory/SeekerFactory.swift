@@ -19,8 +19,9 @@ class SeekerFactory {
         description: String,
         profilePicture: String,
         birthDate: String,
-        gender: String
+        gender: String,
+        phoneNumber: String
     ) -> Seeker {
-        return Seeker(id: id, email: email, password: password, name: name, description: description, profilePicture: profilePicture, birthDate: birthDate, gender: gender)
+        return Seeker(id: id, email: email, password: password, name: name, description: description, profilePicture: profilePicture, birthDate: birthDate, gender: gender, phoneNumber: phoneNumber)
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 public class Seeker: User {
     public var seekerBirthDate: String
     public var seekerGender: String
+    public var seekerPhoneNumber: String
     
     init(
         id: String,
@@ -19,10 +20,12 @@ public class Seeker: User {
         description: String,
         profilePicture: String,
         birthDate: String,
-        gender: String
+        gender: String,
+        phoneNumber: String
     ) {
         seekerBirthDate = birthDate
         seekerGender = gender
+        seekerPhoneNumber = phoneNumber
         super.init(id: id, email: email, password: password, name: name, description: description, profilePicture: profilePicture)
     }
 }
