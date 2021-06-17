@@ -25,6 +25,9 @@ class UpdateProfileViewController: UIViewController {
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var currentPasswordField: UITextField!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var genderView: UIView!
+    @IBOutlet weak var phoneView: UIView!
+    @IBOutlet weak var birthDateView: UIView!
     
     let datePicker = UIDatePicker()
     let viewModel = UpdateProfileViewModel()
@@ -125,6 +128,13 @@ class UpdateProfileViewController: UIViewController {
     }
     
     private func setData(_ data: ProfileModel) {
+        let role = viewModel.checkUserRole(data.profileEmail)
+        if role == 1 {
+            self.genderView.isHidden = true
+            self.phoneView.isHidden = true
+            self.birthDateView.isHidden = true
+        }
+        self.profileImage.sd_setImage(with: URL(string: data.profileImageURL), placeholderImage: #imageLiteral(resourceName: "ic-user"))
         self.emailField.text = data.profileEmail
         self.emailTrigger.accept(data.profileEmail)
         self.nameField.text = data.profileName

@@ -11,16 +11,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdateProfileViewController" customModule="CariKUY" customModuleProvider="target">
             <connections>
+                <outlet property="birthDateView" destination="lDt-8z-CD5" id="rGu-ZR-W4I"/>
                 <outlet property="currentPasswordField" destination="ct0-fj-ekE" id="fiS-PF-WUr"/>
                 <outlet property="dateField" destination="aYC-jd-9u1" id="HE1-ZY-4mH"/>
                 <outlet property="descriptionField" destination="Cz1-Ek-Nrd" id="ter-ad-NJw"/>
                 <outlet property="editButton" destination="IE6-16-rZr" id="MuH-RL-8xd"/>
                 <outlet property="emailField" destination="yWG-fd-och" id="SEo-7x-xZB"/>
                 <outlet property="femaleCheckBox" destination="epD-Si-AuA" id="gAk-4f-R4d"/>
+                <outlet property="genderView" destination="qkY-ym-6qG" id="SvH-N5-3Vi"/>
                 <outlet property="maleCheckBox" destination="jet-xn-nO3" id="lma-Eo-DFr"/>
                 <outlet property="nameField" destination="XxX-pS-Kr7" id="1Cf-ue-BeH"/>
                 <outlet property="passwordField" destination="g00-cp-k79" id="8PB-M4-MTo"/>
                 <outlet property="phoneNumberField" destination="jdY-cb-JZG" id="qTX-UA-UNI"/>
+                <outlet property="phoneView" destination="ohi-kQ-HG1" id="eBO-rQ-2QA"/>
                 <outlet property="profileImage" destination="sZQ-EK-bQI" id="VYe-dr-S7L"/>
                 <outlet property="profileImageField" destination="M45-qb-Qbs" id="JrL-m7-GBA"/>
                 <outlet property="scrollView" destination="C5E-B4-3aj" id="23x-cl-RmF"/>
@@ -38,7 +41,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8J-2U-AdD">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1207"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-user" translatesAutoresizingMaskIntoConstraints="NO" id="sZQ-EK-bQI">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-user" translatesAutoresizingMaskIntoConstraints="NO" id="sZQ-EK-bQI">
                                     <rect key="frame" x="107" y="16" width="200" height="200"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="b5a-uh-CKQ"/>

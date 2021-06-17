@@ -73,32 +73,56 @@ final class UpdateProfileViewModel {
             let gender = data.7.trimmingCharacters(in: .whitespacesAndNewlines)
             let birthDate = data.8.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            if email == "" {
-                return UpdateProfileEnum.errorEmptyEmail
-            } else if email.starts(with: "@") {
-                return UpdateProfileEnum.errorInvalidEmailFormat
-            } else if email.starts(with: ".") {
-                return UpdateProfileEnum.errorInvalidEmailFormat
-            } else if !email.contains("@") {
-                return UpdateProfileEnum.errorInvalidEmailFormat
-            } else if !email.contains(".") {
-                return UpdateProfileEnum.errorInvalidEmailFormat
-            } else if self.checkEmailExist(email) {
-                return UpdateProfileEnum.errorEmailExist
-            } else if name == "" {
-                return UpdateProfileEnum.errorNameEmpty
-            } else if description == "" || description == "-" {
-                return UpdateProfileEnum.errorDescriptionEmpty
-            } else if phoneNumber == "" || phoneNumber == "-" {
-                return UpdateProfileEnum.errorPhoneNumberEmpty
-            } else if gender == "" || gender == "-" {
-                return UpdateProfileEnum.errorGenderEmpty
-            } else if birthDate == "" || birthDate == "-" {
-                return UpdateProfileEnum.errorBirthdateEmpty
-            } else if password == "" {
-                return UpdateProfileEnum.errorPasswordEmpty
-            } else if password != (user?.userPassword ?? password) {
-                return UpdateProfileEnum.errorPasswordNotMatch
+            if self.checkUserRole(email) == 0 {
+                if email == "" {
+                    return UpdateProfileEnum.errorEmptyEmail
+                } else if email.starts(with: "@") {
+                    return UpdateProfileEnum.errorInvalidEmailFormat
+                } else if email.starts(with: ".") {
+                    return UpdateProfileEnum.errorInvalidEmailFormat
+                } else if !email.contains("@") {
+                    return UpdateProfileEnum.errorInvalidEmailFormat
+                } else if !email.contains(".") {
+                    return UpdateProfileEnum.errorInvalidEmailFormat
+                } else if self.checkEmailExist(email) {
+                    return UpdateProfileEnum.errorEmailExist
+                } else if name == "" {
+                    return UpdateProfileEnum.errorNameEmpty
+                } else if description == "" || description == "-" {
+                    return UpdateProfileEnum.errorDescriptionEmpty
+                } else if phoneNumber == "" || phoneNumber == "-" {
+                    return UpdateProfileEnum.errorPhoneNumberEmpty
+                } else if gender == "" || gender == "-" {
+                    return UpdateProfileEnum.errorGenderEmpty
+                } else if birthDate == "" || birthDate == "-" {
+                    return UpdateProfileEnum.errorBirthdateEmpty
+                } else if password == "" {
+                    return UpdateProfileEnum.errorPasswordEmpty
+                } else if password != (user?.userPassword ?? password) {
+                    return UpdateProfileEnum.errorPasswordNotMatch
+                }
+            } else if self.checkUserRole(email) == 1 {
+                if email == "" {
+                    return UpdateProfileEnum.errorEmptyEmail
+                } else if email.starts(with: "@") {
+                    return UpdateProfileEnum.errorInvalidEmailFormat
+                } else if email.starts(with: ".") {
+                    return UpdateProfileEnum.errorInvalidEmailFormat
+                } else if !email.contains("@") {
+                    return UpdateProfileEnum.errorInvalidEmailFormat
+                } else if !email.contains(".") {
+                    return UpdateProfileEnum.errorInvalidEmailFormat
+                } else if self.checkEmailExist(email) {
+                    return UpdateProfileEnum.errorEmailExist
+                } else if name == "" {
+                    return UpdateProfileEnum.errorNameEmpty
+                } else if description == "" || description == "-" {
+                    return UpdateProfileEnum.errorDescriptionEmpty
+                } else if password == "" {
+                    return UpdateProfileEnum.errorPasswordEmpty
+                } else if password != (user?.userPassword ?? password) {
+                    return UpdateProfileEnum.errorPasswordNotMatch
+                }
             }
             
             if newPassword == "" {
@@ -129,10 +153,13 @@ final class UpdateProfileViewModel {
             }
             return result
         } else if role.lowercased() == "creator" {
-//            let creator: Creator = CreatorFactory.shared.makeCreator(id: generateID(), email: email, password: password, name: name, description: "-", profilePicture: "-")
-//
-//            UserService.shared.registerUserSession(data: creator)
-//            return CreatorRepository.shared.createCreator(userData: creator)
+            let creator: Creator = CreatorFactory.shared.makeCreator(id: id, email: email, password: password, name: name, description: description, profilePicture: imageURL)
+
+            let result = CreatorRepository.shared.editCreator(userData: creator)
+            if result == .success {
+                UserService.shared.registerUserSession(data: creator)
+            }
+            return result
         }
         return UpdateProfileEnum.errorFatal
     }

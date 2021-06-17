@@ -64,4 +64,40 @@ class CreatorRepository {
         
         return creatorList
     }
+    
+    func editCreator(userData: Creator) -> UpdateProfileEnum {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .errorFatal }
+        let managedContext = appDelegate.persistentContainer.viewContext
+ 
+        let query = NSFetchRequest<NSFetchRequestResult>(entityName: CreatorEntityKey.entityName.rawValue)
+        query.predicate = NSPredicate(format: "creatorEmail = %@", userData.userEmail)
+        
+        do {
+            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return .errorFatal }
+            
+            if result.count == 0 {
+                return .errorFatal
+            } else {
+                let create = result[0] as NSManagedObject
+                
+                create.setValue(userData.userID, forKey: CreatorEntityKey.id.rawValue)
+                create.setValue(userData.userEmail, forKey: CreatorEntityKey.email.rawValue)
+                create.setValue(userData.userName, forKey: CreatorEntityKey.name.rawValue)
+                create.setValue(userData.userPassword, forKey: CreatorEntityKey.password.rawValue)
+                create.setValue(userData.userDescription, forKey: CreatorEntityKey.description.rawValue)
+                create.setValue(userData.userProfilePicture, forKey: CreatorEntityKey.profilePicture.rawValue)
+                
+                do {
+                    try managedContext.save()
+                }
+                catch {
+                    return .errorFatal
+                }
+            }
+        } catch {
+            return .errorFatal
+        }
+        
+        return .success
+    }
 }
