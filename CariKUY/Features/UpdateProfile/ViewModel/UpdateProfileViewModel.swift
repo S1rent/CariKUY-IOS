@@ -87,11 +87,11 @@ final class UpdateProfileViewModel {
                 return UpdateProfileEnum.errorEmailExist
             } else if name == "" {
                 return UpdateProfileEnum.errorNameEmpty
-            } else if description == "" {
+            } else if description == "" || description == "-" {
                 return UpdateProfileEnum.errorDescriptionEmpty
             } else if phoneNumber == "" || phoneNumber == "-" {
                 return UpdateProfileEnum.errorPhoneNumberEmpty
-            } else if gender == "" {
+            } else if gender == "" || gender == "-" {
                 return UpdateProfileEnum.errorGenderEmpty
             } else if birthDate == "" || birthDate == "-" {
                 return UpdateProfileEnum.errorBirthdateEmpty
