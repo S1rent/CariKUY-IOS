@@ -20,6 +20,9 @@
 		A1CB6D1A267B8D2B0040ACC4 /* CreatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D19267B8D2B0040ACC4 /* CreatorRepository.swift */; };
 		A1CB6D25267B8D570040ACC4 /* CreatorEntityKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D24267B8D570040ACC4 /* CreatorEntityKey.swift */; };
 		A1CB6D2D267B91120040ACC4 /* CreatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D2C267B91120040ACC4 /* CreatorFactory.swift */; };
+		A1CB6D35267B993B0040ACC4 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D34267B993B0040ACC4 /* MenuService.swift */; };
+		A1CB6D54267B9C700040ACC4 /* RegistrationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6D52267B9C700040ACC4 /* RegistrationListViewController.swift */; };
+		A1CB6D55267B9C700040ACC4 /* RegistrationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CB6D53267B9C700040ACC4 /* RegistrationListViewController.xib */; };
 		A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492D267A466F002B89B8 /* AppDelegate.swift */; };
 		A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492F267A466F002B89B8 /* SceneDelegate.swift */; };
 		A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */; };
@@ -86,6 +89,9 @@
 		A1CB6D19267B8D2B0040ACC4 /* CreatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorRepository.swift; sourceTree = "<group>"; };
 		A1CB6D24267B8D570040ACC4 /* CreatorEntityKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorEntityKey.swift; sourceTree = "<group>"; };
 		A1CB6D2C267B91120040ACC4 /* CreatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorFactory.swift; sourceTree = "<group>"; };
+		A1CB6D34267B993B0040ACC4 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
+		A1CB6D52267B9C700040ACC4 /* RegistrationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationListViewController.swift; sourceTree = "<group>"; };
+		A1CB6D53267B9C700040ACC4 /* RegistrationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationListViewController.xib; sourceTree = "<group>"; };
 		A1EA492A267A466F002B89B8 /* CariKUY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CariKUY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EA492D267A466F002B89B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EA492F267A466F002B89B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				A1CB6BF8267B43DA0040ACC4 /* UserService.swift */,
+				A1CB6D34267B993B0040ACC4 /* MenuService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -216,13 +223,38 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A1CB6D10267B8B080040ACC4 /* Home */ = {
+		A1CB6D10267B8B080040ACC4 /* HomeSeeker */ = {
 			isa = PBXGroup;
 			children = (
 				A1EA4A30267A793F002B89B8 /* View */,
 				A1EA4A2F267A793B002B89B8 /* ViewModel */,
 			);
-			path = Home;
+			path = HomeSeeker;
+			sourceTree = "<group>";
+		};
+		A1CB6D4F267B9C0F0040ACC4 /* RegistrationList */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D51267B9C590040ACC4 /* View */,
+				A1CB6D50267B9C530040ACC4 /* ViewModel */,
+			);
+			path = RegistrationList;
+			sourceTree = "<group>";
+		};
+		A1CB6D50267B9C530040ACC4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1CB6D51267B9C590040ACC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB6D52267B9C700040ACC4 /* RegistrationListViewController.swift */,
+				A1CB6D53267B9C700040ACC4 /* RegistrationListViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A1EA4921267A466F002B89B8 = {
@@ -280,11 +312,12 @@
 		A1EA498A267A4994002B89B8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A1EA4A2E267A7938002B89B8 /* Home */,
+				A1EA4A2E267A7938002B89B8 /* HomeSeeker */,
 				A1CB6D05267B8AC20040ACC4 /* HomeCreator */,
 				A1EA4997267A49FF002B89B8 /* LaunchScreen */,
 				A1EA49B1267A4B0F002B89B8 /* Login */,
 				A1EA49B2267A4B14002B89B8 /* Register */,
+				A1CB6D4F267B9C0F0040ACC4 /* RegistrationList */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -494,13 +527,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A1EA4A2E267A7938002B89B8 /* Home */ = {
+		A1EA4A2E267A7938002B89B8 /* HomeSeeker */ = {
 			isa = PBXGroup;
 			children = (
-				A1CB6D10267B8B080040ACC4 /* Home */,
+				A1CB6D10267B8B080040ACC4 /* HomeSeeker */,
 				A1EA4A1E267A7756002B89B8 /* HomeTabBar */,
 			);
-			path = Home;
+			path = HomeSeeker;
 			sourceTree = "<group>";
 		};
 		A1EA4A2F267A793B002B89B8 /* ViewModel */ = {
@@ -662,6 +695,7 @@
 				A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */,
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
 				A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */,
+				A1CB6D55267B9C700040ACC4 /* RegistrationListViewController.xib in Resources */,
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
 				A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */,
 				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
@@ -800,6 +834,7 @@
 				A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */,
 				A1EA49E4267A614C002B89B8 /* LoginEnum.swift in Sources */,
 				A1CB6D2D267B91120040ACC4 /* CreatorFactory.swift in Sources */,
+				A1CB6D35267B993B0040ACC4 /* MenuService.swift in Sources */,
 				A1CB6D15267B8CA70040ACC4 /* Creator.swift in Sources */,
 				A1CB6D0B267B8AF50040ACC4 /* HomeCreatorViewController.swift in Sources */,
 				A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */,
@@ -816,6 +851,7 @@
 				A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */,
 				A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */,
 				A1EA49FF267A6440002B89B8 /* SeekerEntityKey.swift in Sources */,
+				A1CB6D54267B9C700040ACC4 /* RegistrationListViewController.swift in Sources */,
 				A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */,
 				A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */,
 				A1EA4A20267A778B002B89B8 /* HomeTabBarViewController.swift in Sources */,

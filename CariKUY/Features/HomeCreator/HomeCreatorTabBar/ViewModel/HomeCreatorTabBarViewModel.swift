@@ -22,9 +22,7 @@ final class HomeCreatorTabBarViewModel {
     
     public func transform(input: Input) -> Output {
         let menus = input.loadTrigger.map { _ -> [UIViewController] in
-            return [
-                HomeCreatorViewController(callback: input.callback)
-            ]
+            return MenuService.shared.getMenu(userType: .creator, callBack: input.callback)
         }
         
         return Output(
