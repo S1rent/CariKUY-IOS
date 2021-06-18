@@ -11,6 +11,7 @@ import RxCocoa
 
 class EventDetailViewController: UIViewController {
     
+    @IBOutlet weak var labelParticipants: UILabel!
     @IBOutlet weak var imgEventPicture: UIImageView!
     @IBOutlet weak var labelEventDate: UILabel!
     @IBOutlet weak var labelEventType: UILabel!
@@ -46,6 +47,7 @@ class EventDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = data.eventName
 
         self.setupView()
         self.setupData(self.data)
@@ -101,6 +103,9 @@ class EventDetailViewController: UIViewController {
         if role == 0 {
             self.creatorActionView.isHidden = true
             self.buttonRegister.layer.cornerRadius = 6
+            self.labelParticipants.snp.remakeConstraints { remake in
+                remake.height.equalTo(0)
+            }
         } else if role == 1 && self.data.creatorID == (user?.userID ?? "") {
             self.registerView.isHidden = true
             self.buttonEdit.layer.cornerRadius = 6

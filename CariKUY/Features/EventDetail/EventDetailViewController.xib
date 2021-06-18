@@ -22,6 +22,7 @@
                 <outlet property="labelEventDate" destination="bpA-nM-qyx" id="qLK-ii-n6i"/>
                 <outlet property="labelEventTitle" destination="8iZ-VC-Hnb" id="leq-eU-gk1"/>
                 <outlet property="labelEventType" destination="ypy-DI-IrW" id="3ll-dz-s8S"/>
+                <outlet property="labelParticipants" destination="sYh-xn-f1d" id="DnR-mu-O6l"/>
                 <outlet property="participantInitView" destination="11l-ja-ExU" id="8b6-x8-AGx"/>
                 <outlet property="participantStackView" destination="oGK-fc-Vev" id="vsa-Gg-z6w"/>
                 <outlet property="participantsView" destination="g0z-Zj-05W" id="Yr8-uD-d9n"/>

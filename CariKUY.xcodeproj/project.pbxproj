@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8336930C827D7F0584F15300 /* Pods_CariKUY_CariKUYUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1E3ACCE491801E431F5A66 /* Pods_CariKUY_CariKUYUITests.framework */; };
 		9A3181D2154A99CA1682A670 /* Pods_CariKUYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7910CE71539FC097CAE318C3 /* Pods_CariKUYTests.framework */; };
+		A114A371267C81A300D1A1CC /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A36F267C81A300D1A1CC /* HomeCollectionViewCell.swift */; };
+		A114A372267C81A300D1A1CC /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A370267C81A300D1A1CC /* HomeCollectionViewCell.xib */; };
+		A114A37A267C83F400D1A1CC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A379267C83F400D1A1CC /* HomeViewModel.swift */; };
 		A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BF8267B43DA0040ACC4 /* UserService.swift */; };
 		A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */; };
 		A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */; };
@@ -104,6 +107,9 @@
 		6D1D7CA54F1763AA7040054C /* Pods-CariKUYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUYTests.release.xcconfig"; path = "Target Support Files/Pods-CariKUYTests/Pods-CariKUYTests.release.xcconfig"; sourceTree = "<group>"; };
 		7910CE71539FC097CAE318C3 /* Pods_CariKUYTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CariKUYTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFB252068768C975BBDC79B /* Pods-CariKUYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CariKUYTests.debug.xcconfig"; path = "Target Support Files/Pods-CariKUYTests/Pods-CariKUYTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A114A36F267C81A300D1A1CC /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A114A370267C81A300D1A1CC /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		A114A379267C83F400D1A1CC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A1CB6BF8267B43DA0040ACC4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
 		A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -207,6 +213,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A114A36E267C817F00D1A1CC /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A114A36F267C81A300D1A1CC /* HomeCollectionViewCell.swift */,
+				A114A370267C81A300D1A1CC /* HomeCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		A1CB6BF7267B43BF0040ACC4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +736,7 @@
 		A1EA4A2F267A793B002B89B8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A114A379267C83F400D1A1CC /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -728,6 +744,7 @@
 		A1EA4A30267A793F002B89B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A114A36E267C817F00D1A1CC /* CollectionViewCell */,
 				A1EA4A31267A7949002B89B8 /* HomeViewController.swift */,
 				A1EA4A32267A7949002B89B8 /* HomeViewController.xib */,
 			);
@@ -885,6 +902,7 @@
 				A1D07D55267C61700038CC04 /* EventDetailViewController.xib in Resources */,
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
 				A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */,
+				A114A372267C81A300D1A1CC /* HomeCollectionViewCell.xib in Resources */,
 				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
 				A1CB6D8F267BAE5E0040ACC4 /* UpdateProfileViewController.xib in Resources */,
 			);
@@ -1030,6 +1048,7 @@
 				A1D07CE8267C42050038CC04 /* CreateEventViewController.swift in Sources */,
 				A1CB6D0B267B8AF50040ACC4 /* HomeCreatorViewController.swift in Sources */,
 				A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */,
+				A114A37A267C83F400D1A1CC /* HomeViewModel.swift in Sources */,
 				A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */,
 				A1CB6D25267B8D570040ACC4 /* CreatorEntityKey.swift in Sources */,
 				A1CB6D7A267BA8190040ACC4 /* UIStackView+Ext.swift in Sources */,
@@ -1045,6 +1064,7 @@
 				A1EA49F1267A6253002B89B8 /* Seeker.swift in Sources */,
 				A1EA49F9267A627E002B89B8 /* User.swift in Sources */,
 				A1EA4A1A267A70DA002B89B8 /* ObservableType+Ext.swift in Sources */,
+				A114A371267C81A300D1A1CC /* HomeCollectionViewCell.swift in Sources */,
 				A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */,
 				A1CB6D85267BA9B50040ACC4 /* ProfileModel.swift in Sources */,
 				A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */,
