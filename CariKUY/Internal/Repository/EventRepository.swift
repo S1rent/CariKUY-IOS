@@ -164,6 +164,38 @@ class EventRepository {
 
         return eventList
     }
+    
+    func deleteEventByID(eventID: String) -> CreateEventEnum {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .errorFatal }
+        let managedContext = appDelegate.persistentContainer.viewContext
+ 
+        let query = NSFetchRequest<NSFetchRequestResult>(entityName: "Event")
+        let predicate = NSPredicate(format: "eventID = %@", eventID)
+        query.predicate = predicate
+        
+        do {
+            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return .errorFatal }
+            
+            if result.count == 0 {
+                return .errorFatal
+            } else {
+                let create = result[0] as NSManagedObject
+                managedContext.delete(create)
+                
+                do {
+                    try managedContext.save()
+                }
+                catch {
+                    return .errorFatal
+                }
+            }
+        } catch {
+            return .errorFatal
+        }
+        
+        return .success
+    }
+    
 //
 //    func editSeeker(userData: Seeker) -> UpdateProfileEnum {
 //        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .errorFatal }

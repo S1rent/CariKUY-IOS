@@ -69,6 +69,36 @@ class SeekerRepository {
         return seekerList
     }
     
+    func getSeekersByID(id: String) -> [Seeker] {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
+        let managedContext = appDelegate.persistentContainer.viewContext
+ 
+        var seekerList: [Seeker] = []
+        let query = NSFetchRequest<NSFetchRequestResult>(entityName: SeekerEntityKey.entityName.rawValue)
+        query.predicate = NSPredicate(format: "seekerID = %@", id)
+        
+        do {
+            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return [] }
+            
+            result.forEach { user in
+                let model = Seeker(
+                    id: user.value(forKey: SeekerEntityKey.id.rawValue) as? String ?? "", email: user.value(forKey: SeekerEntityKey.email.rawValue) as? String ?? "",
+                    password: user.value(forKey: SeekerEntityKey.password.rawValue) as? String ?? "",
+                    name: user.value(forKey: SeekerEntityKey.name.rawValue) as? String ?? "-",
+                    description: user.value(forKey: SeekerEntityKey.description.rawValue) as? String ?? "-",
+                    profilePicture: user.value(forKey: SeekerEntityKey.profilePicture.rawValue) as? String ?? "-", birthDate: user.value(forKey: SeekerEntityKey.birthDate.rawValue) as? String ?? "-",
+                    gender: user.value(forKey: SeekerEntityKey.gender.rawValue) as? String ?? "-",
+                    phoneNumber: user.value(forKey: SeekerEntityKey.phoneNumber.rawValue) as? String ?? "-"
+                )
+                seekerList.append(model)
+            }
+        } catch {
+            return []
+        }
+        
+        return seekerList
+    }
+    
     func editSeeker(userData: Seeker) -> UpdateProfileEnum {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .errorFatal }
         let managedContext = appDelegate.persistentContainer.viewContext

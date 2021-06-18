@@ -18,6 +18,7 @@ final class EventDetailViewModel {
     struct Output {
         let creatorData: Driver<[User]>
         let successParticipate: Driver<(ParticipationEnum, Bool)>
+        let participants: Driver<[Seeker]>
     }
     
     let data: EventModel
@@ -30,6 +31,17 @@ final class EventDetailViewModel {
             let creator = CreatorRepository.shared.getCreatorsByID(id: self.data.creatorID)
             
             return Driver.just(creator)
+        }
+        
+        let participants = input.loadTrigger.flatMapLatest { _ -> Driver<[Seeker]> in
+            
+            var seekerList: [Seeker] = []
+            let participantList = ParticipationRepository.shared.getParticipationListByEventID(id: self.data.eventID)
+            
+            for participant in participantList {
+                seekerList += SeekerRepository.shared.getSeekersByID(id: participant.seekerID)
+            }
+            return Driver.just(seekerList)
         }
         
         let successParticipates = input.participateTrigger.flatMapLatest { _ -> Driver<(ParticipationEnum, Bool)> in
@@ -53,7 +65,8 @@ final class EventDetailViewModel {
         
         return Output(
             creatorData: creatorData,
-            successParticipate: successParticipates
+            successParticipate: successParticipates,
+            participants: participants
         )
     }
     

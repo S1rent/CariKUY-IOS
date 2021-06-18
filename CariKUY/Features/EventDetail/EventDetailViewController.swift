@@ -82,6 +82,29 @@ class EventDetailViewController: UIViewController {
                         self.buttonRegister.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7490196078, blue: 0.1411764706, alpha: 1)
                     }
                 }
+            }),
+            output.participants.drive(onNext: { [weak self] data in
+                guard let self = self else { return }
+                
+                self.setParticipant(data)
+            }),
+            self.buttonDelete.rx.tap.asDriver().drive(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                
+                let participantList = ParticipationRepository.shared.getParticipationListByEventID(id: self.data.eventID)
+                if participantList.count != 0 {
+                    self.presentPopUp(title: "Error", message: "You cannot delete an event that already have a participants.", actions: [UIAlertAction(title: "OK", style: .default, handler: nil)], completion: nil)
+                } else {
+                    let result = EventRepository.shared.deleteEventByID(eventID: self.data.eventID)
+                    if result == .success {
+                        self.presentPopUp(title: "Success", message: "Successfully delete event.", actions: [UIAlertAction(title: "OK", style: .default, handler: { _ in
+                            self.dismiss(animated: true, completion: nil)
+                            DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
+                                self.navigationController?.popViewController(animated: true)
+                            })
+                        })], completion: nil)
+                    }
+                }
             })
         )
     }
@@ -142,7 +165,38 @@ class EventDetailViewController: UIViewController {
         } else {
             return
         }
+    }
+    
+    func setParticipant(_ data: [Seeker]) {
+        self.participantStackView.safelyRemoveAllArrangedSubviews()
         
+        for seeker in data {
+            let itemView = ParticipantItemView(data: seeker, callBack: self.navigateToParticipantDetail)
+            itemView.labelUserName.text = seeker.userName
+            itemView.imageUser.sd_setImage(with: URL(string: seeker.userProfilePicture), placeholderImage: #imageLiteral(resourceName: "ic-user"))
+            self.participantStackView.addArrangedSubview(itemView)
+        }
+        
+        if data.isEmpty {
+            let view = UIView()
+            let label = UILabel()
+            label.text = "No participants yet."
+            label.font = .systemFont(ofSize: 16)
+            view.addSubview(label)
+            label.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.centerY.equalToSuperview()
+            }
+            self.participantStackView.addArrangedSubview(view)
+            view.snp.makeConstraints { make in
+                make.height.equalTo(30)
+            }
+        }
+    }
+    
+    func navigateToParticipantDetail(_ data: Seeker) {
+        let vc = ParticipantDetailViewController(data: data)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }

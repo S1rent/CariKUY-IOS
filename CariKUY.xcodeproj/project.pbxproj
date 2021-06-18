@@ -21,6 +21,10 @@
 		A114A3A4267CA34C00D1A1CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A3A2267CA34C00D1A1CC /* SearchViewController.swift */; };
 		A114A3A5267CA34C00D1A1CC /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A3A3267CA34C00D1A1CC /* SearchViewController.xib */; };
 		A114A3AD267CA4F500D1A1CC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A3AC267CA4F500D1A1CC /* SearchViewModel.swift */; };
+		A114A3B2267CB24F00D1A1CC /* ParticipantItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A3B1267CB24F00D1A1CC /* ParticipantItemView.swift */; };
+		A114A3B7267CB29700D1A1CC /* ParticipantItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A3B6267CB29700D1A1CC /* ParticipantItemView.xib */; };
+		A114A3BD267CB49C00D1A1CC /* ParticipantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A3BB267CB49C00D1A1CC /* ParticipantDetailViewController.swift */; };
+		A114A3BE267CB49C00D1A1CC /* ParticipantDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A3BC267CB49C00D1A1CC /* ParticipantDetailViewController.xib */; };
 		A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BF8267B43DA0040ACC4 /* UserService.swift */; };
 		A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */; };
 		A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */; };
@@ -128,6 +132,10 @@
 		A114A3A2267CA34C00D1A1CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A114A3A3267CA34C00D1A1CC /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		A114A3AC267CA4F500D1A1CC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		A114A3B1267CB24F00D1A1CC /* ParticipantItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantItemView.swift; sourceTree = "<group>"; };
+		A114A3B6267CB29700D1A1CC /* ParticipantItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantItemView.xib; sourceTree = "<group>"; };
+		A114A3BB267CB49C00D1A1CC /* ParticipantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantDetailViewController.swift; sourceTree = "<group>"; };
+		A114A3BC267CB49C00D1A1CC /* ParticipantDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantDetailViewController.xib; sourceTree = "<group>"; };
 		A1CB6BF8267B43DA0040ACC4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
 		A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -482,6 +490,10 @@
 				A1D07D5C267C6C610038CC04 /* EventDetailViewModel.swift */,
 				A114A383267C96C900D1A1CC /* ParticipationEnum.swift */,
 				A114A38B267C97B300D1A1CC /* ParticipationModel.swift */,
+				A114A3B1267CB24F00D1A1CC /* ParticipantItemView.swift */,
+				A114A3B6267CB29700D1A1CC /* ParticipantItemView.xib */,
+				A114A3BB267CB49C00D1A1CC /* ParticipantDetailViewController.swift */,
+				A114A3BC267CB49C00D1A1CC /* ParticipantDetailViewController.xib */,
 			);
 			path = EventDetail;
 			sourceTree = "<group>";
@@ -937,6 +949,7 @@
 				A1CB6D7F267BA85F0040ACC4 /* ProfileItemView.xib in Resources */,
 				A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */,
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
+				A114A3B7267CB29700D1A1CC /* ParticipantItemView.xib in Resources */,
 				A1CB6D5F267B9D790040ACC4 /* ProfileViewController.xib in Resources */,
 				A1D07CE9267C42050038CC04 /* CreateEventViewController.xib in Resources */,
 				A114A394267C9EC200D1A1CC /* MyParticipationViewController.xib in Resources */,
@@ -948,6 +961,7 @@
 				A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */,
 				A114A372267C81A300D1A1CC /* HomeCollectionViewCell.xib in Resources */,
 				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
+				A114A3BE267CB49C00D1A1CC /* ParticipantDetailViewController.xib in Resources */,
 				A114A3A5267CA34C00D1A1CC /* SearchViewController.xib in Resources */,
 				A1CB6D8F267BAE5E0040ACC4 /* UpdateProfileViewController.xib in Resources */,
 			);
@@ -1100,6 +1114,7 @@
 				A114A37A267C83F400D1A1CC /* HomeViewModel.swift in Sources */,
 				A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */,
 				A1CB6D25267B8D570040ACC4 /* CreatorEntityKey.swift in Sources */,
+				A114A3BD267CB49C00D1A1CC /* ParticipantDetailViewController.swift in Sources */,
 				A1CB6D7A267BA8190040ACC4 /* UIStackView+Ext.swift in Sources */,
 				A1EA4A33267A7949002B89B8 /* HomeViewController.swift in Sources */,
 				A1EA4A4E267A7A9E002B89B8 /* SeekerFactory.swift in Sources */,
@@ -1120,6 +1135,7 @@
 				A114A393267C9EC200D1A1CC /* MyParticipationViewController.swift in Sources */,
 				A1CB6D85267BA9B50040ACC4 /* ProfileModel.swift in Sources */,
 				A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */,
+				A114A3B2267CB24F00D1A1CC /* ParticipantItemView.swift in Sources */,
 				A1EA49FF267A6440002B89B8 /* SeekerEntityKey.swift in Sources */,
 				A1D07D3D267C56270038CC04 /* EventModel.swift in Sources */,
 				A1CD05BB267BBDC50033ACED /* UpdateProfileViewModel.swift in Sources */,
