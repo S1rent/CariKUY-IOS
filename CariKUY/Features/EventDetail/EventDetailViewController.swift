@@ -105,6 +105,12 @@ class EventDetailViewController: UIViewController {
                         })], completion: nil)
                     }
                 }
+            }),
+            self.buttonEdit.rx.tap.asDriver().drive(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                
+                let vc = EditEventViewController(self.data, self.dismissDetail)
+                self.navigationController?.pushViewController(vc, animated: true)
             })
         )
     }
@@ -199,4 +205,8 @@ class EventDetailViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    func dismissDetail() {
+        self.navigationController?.popViewController(animated: false)
+    }
+    
 }

@@ -25,6 +25,8 @@
 		A114A3B7267CB29700D1A1CC /* ParticipantItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A3B6267CB29700D1A1CC /* ParticipantItemView.xib */; };
 		A114A3BD267CB49C00D1A1CC /* ParticipantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A3BB267CB49C00D1A1CC /* ParticipantDetailViewController.swift */; };
 		A114A3BE267CB49C00D1A1CC /* ParticipantDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A3BC267CB49C00D1A1CC /* ParticipantDetailViewController.xib */; };
+		A114A3C4267CB9C000D1A1CC /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A3C2267CB9C000D1A1CC /* EditEventViewController.swift */; };
+		A114A3C5267CB9C000D1A1CC /* EditEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A3C3267CB9C000D1A1CC /* EditEventViewController.xib */; };
 		A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BF8267B43DA0040ACC4 /* UserService.swift */; };
 		A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */; };
 		A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */; };
@@ -136,6 +138,8 @@
 		A114A3B6267CB29700D1A1CC /* ParticipantItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantItemView.xib; sourceTree = "<group>"; };
 		A114A3BB267CB49C00D1A1CC /* ParticipantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantDetailViewController.swift; sourceTree = "<group>"; };
 		A114A3BC267CB49C00D1A1CC /* ParticipantDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantDetailViewController.xib; sourceTree = "<group>"; };
+		A114A3C2267CB9C000D1A1CC /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
+		A114A3C3267CB9C000D1A1CC /* EditEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditEventViewController.xib; sourceTree = "<group>"; };
 		A1CB6BF8267B43DA0040ACC4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
 		A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -494,6 +498,8 @@
 				A114A3B6267CB29700D1A1CC /* ParticipantItemView.xib */,
 				A114A3BB267CB49C00D1A1CC /* ParticipantDetailViewController.swift */,
 				A114A3BC267CB49C00D1A1CC /* ParticipantDetailViewController.xib */,
+				A114A3C2267CB9C000D1A1CC /* EditEventViewController.swift */,
+				A114A3C3267CB9C000D1A1CC /* EditEventViewController.xib */,
 			);
 			path = EventDetail;
 			sourceTree = "<group>";
@@ -959,6 +965,7 @@
 				A1D07D55267C61700038CC04 /* EventDetailViewController.xib in Resources */,
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
 				A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */,
+				A114A3C5267CB9C000D1A1CC /* EditEventViewController.xib in Resources */,
 				A114A372267C81A300D1A1CC /* HomeCollectionViewCell.xib in Resources */,
 				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
 				A114A3BE267CB49C00D1A1CC /* ParticipantDetailViewController.xib in Resources */,
@@ -1142,6 +1149,7 @@
 				A1CB6D6D267BA7900040ACC4 /* ProfileItemView.swift in Sources */,
 				A1CB6D54267B9C700040ACC4 /* RegistrationListViewController.swift in Sources */,
 				A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */,
+				A114A3C4267CB9C000D1A1CC /* EditEventViewController.swift in Sources */,
 				A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */,
 				A1EA4A20267A778B002B89B8 /* HomeTabBarViewController.swift in Sources */,
 				A1D07CF6267C4CCE0038CC04 /* CreateEventEnum.swift in Sources */,

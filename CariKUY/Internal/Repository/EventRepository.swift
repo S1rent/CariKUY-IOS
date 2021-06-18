@@ -196,43 +196,34 @@ class EventRepository {
         return .success
     }
     
-//
-//    func editSeeker(userData: Seeker) -> UpdateProfileEnum {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .errorFatal }
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//
-//        let query = NSFetchRequest<NSFetchRequestResult>(entityName: SeekerEntityKey.entityName.rawValue)
-//        query.predicate = NSPredicate(format: "seekerEmail = %@", userData.userEmail)
-//
-//        do {
-//            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return .errorFatal }
-//
-//            if result.count == 0 {
-//                return .errorFatal
-//            } else {
-//                let create = result[0] as NSManagedObject
-//
-//                create.setValue(userData.userID, forKey: SeekerEntityKey.id.rawValue)
-//                create.setValue(userData.userEmail, forKey: SeekerEntityKey.email.rawValue)
-//                create.setValue(userData.userName, forKey: SeekerEntityKey.name.rawValue)
-//                create.setValue(userData.userPassword, forKey: SeekerEntityKey.password.rawValue)
-//                create.setValue(userData.seekerBirthDate, forKey: SeekerEntityKey.birthDate.rawValue)
-//                create.setValue(userData.userDescription, forKey: SeekerEntityKey.description.rawValue)
-//                create.setValue(userData.seekerGender, forKey: SeekerEntityKey.gender.rawValue)
-//                create.setValue(userData.userProfilePicture, forKey: SeekerEntityKey.profilePicture.rawValue)
-//                create.setValue(userData.seekerPhoneNumber, forKey: SeekerEntityKey.phoneNumber.rawValue)
-//
-//                do {
-//                    try managedContext.save()
-//                }
-//                catch {
-//                    return .errorFatal
-//                }
-//            }
-//        } catch {
-//            return .errorFatal
-//        }
-//
-//        return .success
-//    }
+    func editEvent(eventID: String, date: String) -> CreateEventEnum {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .errorFatal }
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        let query = NSFetchRequest<NSFetchRequestResult>(entityName: "Event")
+        query.predicate = NSPredicate(format: "eventID = %@", eventID)
+
+        do {
+            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return .errorFatal }
+
+            if result.count == 0 {
+                return .errorFatal
+            } else {
+                let create = result[0] as NSManagedObject
+
+                create.setValue(date, forKey: "eventDate")
+
+                do {
+                    try managedContext.save()
+                }
+                catch {
+                    return .errorFatal
+                }
+            }
+        } catch {
+            return .errorFatal
+        }
+
+        return .success
+    }
 }
