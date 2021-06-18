@@ -13,6 +13,37 @@ class EventRepository {
     public static let shared = EventRepository()
     private init() { }
     
+    func getAllEvents() -> [EventModel] {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        var eventList: [EventModel] = []
+        let query = NSFetchRequest<NSFetchRequestResult>(entityName: "Event")
+
+        do {
+            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return [] }
+
+            result.forEach { user in
+                let model = EventModel(
+                    eventID: user.value(forKey: "eventID") as? String ?? "",
+                    creatorID: user.value(forKey: "creatorID") as? String ?? "",
+                    eventName: user.value(forKey: "eventName") as? String ?? "",
+                    eventDate: user.value(forKey: "eventDate") as? String ?? "",
+                    eventDesc: user.value(forKey: "eventDescription") as? String ?? "",
+                    eventType: user.value(forKey: "eventType") as? String ?? "",
+                    eventPicture: user.value(forKey: "eventPictureURL") as? String ?? "",
+                    eventReq: user.value(forKey: "eventRequirement") as? String ?? ""
+                )
+                
+                eventList.append(model)
+            }
+        } catch {
+            return []
+        }
+
+        return eventList
+    }
+    
     func createEvent(creatorID: String, date: String, desc: String, id: String, name: String, picture: String, requirement: String, type: String) -> CreateEventEnum {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return CreateEventEnum.errorFatal }
         let managedContext = appDelegate.persistentContainer.viewContext

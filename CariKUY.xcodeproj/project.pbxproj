@@ -18,6 +18,9 @@
 		A114A393267C9EC200D1A1CC /* MyParticipationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A391267C9EC200D1A1CC /* MyParticipationViewController.swift */; };
 		A114A394267C9EC200D1A1CC /* MyParticipationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A392267C9EC200D1A1CC /* MyParticipationViewController.xib */; };
 		A114A39D267C9F3F00D1A1CC /* MyParticipationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A39C267C9F3F00D1A1CC /* MyParticipationViewModel.swift */; };
+		A114A3A4267CA34C00D1A1CC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A3A2267CA34C00D1A1CC /* SearchViewController.swift */; };
+		A114A3A5267CA34C00D1A1CC /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A3A3267CA34C00D1A1CC /* SearchViewController.xib */; };
+		A114A3AD267CA4F500D1A1CC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A3AC267CA4F500D1A1CC /* SearchViewModel.swift */; };
 		A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BF8267B43DA0040ACC4 /* UserService.swift */; };
 		A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */; };
 		A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */; };
@@ -122,6 +125,9 @@
 		A114A391267C9EC200D1A1CC /* MyParticipationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParticipationViewController.swift; sourceTree = "<group>"; };
 		A114A392267C9EC200D1A1CC /* MyParticipationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyParticipationViewController.xib; sourceTree = "<group>"; };
 		A114A39C267C9F3F00D1A1CC /* MyParticipationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParticipationViewModel.swift; sourceTree = "<group>"; };
+		A114A3A2267CA34C00D1A1CC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A114A3A3267CA34C00D1A1CC /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		A114A3AC267CA4F500D1A1CC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A1CB6BF8267B43DA0040ACC4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
 		A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -242,6 +248,16 @@
 				A114A39C267C9F3F00D1A1CC /* MyParticipationViewModel.swift */,
 			);
 			path = MyParticipation;
+			sourceTree = "<group>";
+		};
+		A114A3A1267CA33F00D1A1CC /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A114A3A2267CA34C00D1A1CC /* SearchViewController.swift */,
+				A114A3A3267CA34C00D1A1CC /* SearchViewController.xib */,
+				A114A3AC267CA4F500D1A1CC /* SearchViewModel.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		A1CB6BF7267B43BF0040ACC4 /* Service */ = {
@@ -525,6 +541,7 @@
 		A1EA498A267A4994002B89B8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A114A3A1267CA33F00D1A1CC /* Search */,
 				A114A390267C9EAD00D1A1CC /* MyParticipation */,
 				A1D07D51267C61610038CC04 /* EventDetail */,
 				A1D07CE5267C41F30038CC04 /* CreateEvent */,
@@ -931,6 +948,7 @@
 				A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */,
 				A114A372267C81A300D1A1CC /* HomeCollectionViewCell.xib in Resources */,
 				A1EA49BF267A4B49002B89B8 /* RegisterViewController.xib in Resources */,
+				A114A3A5267CA34C00D1A1CC /* SearchViewController.xib in Resources */,
 				A1CB6D8F267BAE5E0040ACC4 /* UpdateProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1065,6 +1083,7 @@
 				A1CB6CFC267B8A850040ACC4 /* HomeCreatorTabBarViewController.swift in Sources */,
 				A1CB6D1A267B8D2B0040ACC4 /* CreatorRepository.swift in Sources */,
 				A1D07D37267C4FAF0038CC04 /* EventRepository.swift in Sources */,
+				A114A3AD267CA4F500D1A1CC /* SearchViewModel.swift in Sources */,
 				A114A384267C96C900D1A1CC /* ParticipationEnum.swift in Sources */,
 				A1EA49EB267A6190002B89B8 /* RegisterEnum.swift in Sources */,
 				A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */,
@@ -1073,6 +1092,7 @@
 				A1EA49E4267A614C002B89B8 /* LoginEnum.swift in Sources */,
 				A1CB6D2D267B91120040ACC4 /* CreatorFactory.swift in Sources */,
 				A1CB6D35267B993B0040ACC4 /* MenuService.swift in Sources */,
+				A114A3A4267CA34C00D1A1CC /* SearchViewController.swift in Sources */,
 				A1CB6D15267B8CA70040ACC4 /* Creator.swift in Sources */,
 				A1D07CE8267C42050038CC04 /* CreateEventViewController.swift in Sources */,
 				A1CB6D0B267B8AF50040ACC4 /* HomeCreatorViewController.swift in Sources */,

@@ -11,12 +11,17 @@ import RxCocoa
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var scholarButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var jobCollectionVIew: UICollectionView!
     @IBOutlet weak var otherCollectionView: UICollectionView!
     @IBOutlet weak var competitionCollectionView: UICollectionView!
     @IBOutlet weak var scholarshipCollectionView: UICollectionView!
+    @IBOutlet weak var otherButton: UIButton!
+    @IBOutlet weak var competitionButton: UIButton!
+    @IBOutlet weak var jobButton: UIButton!
     
+    var string = ""
     let viewModel = HomeViewModel()
     let changeTitle: ((_ title: String) -> Void)
     
@@ -69,12 +74,63 @@ class HomeViewController: UIViewController {
             },
             output.scholars.drive(self.scholarshipCollectionView.rx.items(cellIdentifier: HomeCollectionViewCell.identifier, cellType: HomeCollectionViewCell.self)) { (_, data, cell) in
                 cell.setData(data)
-            }
+            },
+            searchBar.rx.text.asDriver().skip(1).debounce(RxTimeInterval.milliseconds(300)).drive(onNext: { [weak self] text in
+                guard let self = self else { return }
+                
+                if text?.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                    if let query = text {
+                        if self.string != query {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                                let viewController = SearchViewController(query: query.trimmingCharacters(in: .whitespacesAndNewlines), type: "")
+                                self.navigationController?.pushViewController(viewController, animated: true)
+                            })
+                        }
+                        
+                        self.string = query
+                    }
+                }
+            }),
+            jobButton.rx.tap.asDriver().drive(onNext: { [weak self] text in
+                guard let self = self else { return }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                    let viewController = SearchViewController(query: "", type: "Job")
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                })
+            }),
+            scholarButton.rx.tap.asDriver().drive(onNext: { [weak self] text in
+                guard let self = self else { return }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                    let viewController = SearchViewController(query: "", type: "Scholarship")
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                })
+            }),
+            competitionButton.rx.tap.asDriver().drive(onNext: { [weak self] text in
+                guard let self = self else { return }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                    let viewController = SearchViewController(query: "", type: "Competition")
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                })
+            }),
+            otherButton.rx.tap.asDriver().drive(onNext: { [weak self] text in
+                guard let self = self else { return }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                    let viewController = SearchViewController(query: "", type: "Other")
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                })
+            })
         )
     }
     
     func setupView() {
-        
+        self.jobButton.layer.cornerRadius = 6
+        self.otherButton.layer.cornerRadius = 6
+        self.scholarButton.layer.cornerRadius = 6
+        self.competitionButton.layer.cornerRadius = 6
     }
     
     private func setupCollectionView(_ collectionView: UICollectionView) {
