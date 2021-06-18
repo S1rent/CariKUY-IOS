@@ -39,6 +39,8 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.changeTitle("Profile")
+        navigationController?.setNavigationBarHidden(false, animated: animated)
         
         self.loadTrigger.accept(())
     }

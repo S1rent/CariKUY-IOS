@@ -8,6 +8,16 @@
         <attribute name="creatorPassword" optional="YES" attributeType="String"/>
         <attribute name="creatorProfileImage" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="creatorID" optional="YES" attributeType="String"/>
+        <attribute name="eventDate" optional="YES" attributeType="String"/>
+        <attribute name="eventDescription" optional="YES" attributeType="String"/>
+        <attribute name="eventID" optional="YES" attributeType="String"/>
+        <attribute name="eventName" optional="YES" attributeType="String"/>
+        <attribute name="eventPictureURL" optional="YES" attributeType="String"/>
+        <attribute name="eventRequirement" optional="YES" attributeType="String"/>
+        <attribute name="eventType" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="SeekerEntity" representedClassName="SeekerEntity" syncable="YES" codeGenerationType="class">
         <attribute name="seekerBirthDate" optional="YES" attributeType="String"/>
         <attribute name="seekerDescription" optional="YES" attributeType="String"/>
@@ -22,5 +32,6 @@
     <elements>
         <element name="CreatorEntity" positionX="-54" positionY="-9" width="128" height="133"/>
         <element name="SeekerEntity" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="Event" positionX="-54" positionY="54" width="128" height="163"/>
     </elements>
 </model>

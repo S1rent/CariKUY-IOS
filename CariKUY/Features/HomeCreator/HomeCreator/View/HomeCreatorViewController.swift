@@ -21,11 +21,14 @@ class HomeCreatorViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.changeTitle("Home")
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        UserService.shared.logout()
-        self.navigateAndSetRootViewController(viewController: LoginViewController())
     }
 
 }

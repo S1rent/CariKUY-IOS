@@ -21,6 +21,7 @@ class HomeCreatorTabBarViewController: UITabBarController {
         
         self.setupNavigationBar()
         self.setupTabBarView()
+        self.setupRightBarItem()
         
         self.bindUI()
     }
@@ -55,8 +56,19 @@ class HomeCreatorTabBarViewController: UITabBarController {
         self.tabBar.isTranslucent = false
     }
     
+    private func setupRightBarItem() {
+        let buttonProfile = UIBarButtonItem(image: UIImage(systemName: "pencil"), style: .plain, target: self, action: #selector(navigateToCreate))
+        self.navigationItem.rightBarButtonItem = buttonProfile
+    }
+    
     func changeNavigationBarTitle(title: String) {
         self.title = title
+    }
+    
+    @objc func navigateToCreate() {
+        let viewController = CreateEventViewController()
+        
+        UIApplication.topViewController()?.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

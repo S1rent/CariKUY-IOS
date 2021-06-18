@@ -39,7 +39,7 @@ class MenuService {
     
     private func getCreatorMenuList() -> [UIViewController] {
         return [
-            getSeekerHomeViewController(),
+            getCreatorHomeViewController(),
             getProfileViewController()
         ]
     }
@@ -47,6 +47,18 @@ class MenuService {
     func getSeekerHomeViewController() -> UIViewController {
         if let callback = self.callBack {
             let viewController = HomeViewController(callback: callback)
+            
+            viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+            viewController.tabBarItem.imageInsets = UIEdgeInsets.init(top: -5, left: -5, bottom: -5, right: -5)
+            
+            return viewController
+        }
+        return UIViewController()
+    }
+    
+    func getCreatorHomeViewController() -> UIViewController {
+        if let callback = self.callBack {
+            let viewController = HomeCreatorViewController(callback: callback)
             
             viewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
             viewController.tabBarItem.imageInsets = UIEdgeInsets.init(top: -5, left: -5, bottom: -5, right: -5)

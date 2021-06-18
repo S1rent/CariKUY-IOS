@@ -37,6 +37,11 @@
 		A1CD05B6267BBAD00033ACED /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD05B5267BBAD00033ACED /* Date+Ext.swift */; };
 		A1CD05BB267BBDC50033ACED /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD05BA267BBDC50033ACED /* UpdateProfileViewModel.swift */; };
 		A1CD05C1267BC2430033ACED /* UpdateProfileEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD05C0267BC2430033ACED /* UpdateProfileEnum.swift */; };
+		A1D07CE8267C42050038CC04 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07CE6267C42050038CC04 /* CreateEventViewController.swift */; };
+		A1D07CE9267C42050038CC04 /* CreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D07CE7267C42050038CC04 /* CreateEventViewController.xib */; };
+		A1D07CF1267C4BE90038CC04 /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07CF0267C4BE90038CC04 /* CreateEventViewModel.swift */; };
+		A1D07CF6267C4CCE0038CC04 /* CreateEventEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07CF5267C4CCE0038CC04 /* CreateEventEnum.swift */; };
+		A1D07D37267C4FAF0038CC04 /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07D36267C4FAF0038CC04 /* EventRepository.swift */; };
 		A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492D267A466F002B89B8 /* AppDelegate.swift */; };
 		A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492F267A466F002B89B8 /* SceneDelegate.swift */; };
 		A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */; };
@@ -120,6 +125,11 @@
 		A1CD05B5267BBAD00033ACED /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		A1CD05BA267BBDC50033ACED /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
 		A1CD05C0267BC2430033ACED /* UpdateProfileEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileEnum.swift; sourceTree = "<group>"; };
+		A1D07CE6267C42050038CC04 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		A1D07CE7267C42050038CC04 /* CreateEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventViewController.xib; sourceTree = "<group>"; };
+		A1D07CF0267C4BE90038CC04 /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
+		A1D07CF5267C4CCE0038CC04 /* CreateEventEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventEnum.swift; sourceTree = "<group>"; };
+		A1D07D36267C4FAF0038CC04 /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
 		A1EA492A267A466F002B89B8 /* CariKUY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CariKUY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EA492D267A466F002B89B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EA492F267A466F002B89B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -365,6 +375,17 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		A1D07CE5267C41F30038CC04 /* CreateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				A1D07CE6267C42050038CC04 /* CreateEventViewController.swift */,
+				A1D07CE7267C42050038CC04 /* CreateEventViewController.xib */,
+				A1D07CF0267C4BE90038CC04 /* CreateEventViewModel.swift */,
+				A1D07CF5267C4CCE0038CC04 /* CreateEventEnum.swift */,
+			);
+			path = CreateEvent;
+			sourceTree = "<group>";
+		};
 		A1EA4921267A466F002B89B8 = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +441,7 @@
 		A1EA498A267A4994002B89B8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A1D07CE5267C41F30038CC04 /* CreateEvent */,
 				A1EA4A2E267A7938002B89B8 /* HomeSeeker */,
 				A1CB6D05267B8AC20040ACC4 /* HomeCreator */,
 				A1EA4997267A49FF002B89B8 /* LaunchScreen */,
@@ -559,6 +581,7 @@
 			children = (
 				A1CB6D19267B8D2B0040ACC4 /* CreatorRepository.swift */,
 				A1EA49DB267A60FC002B89B8 /* SeekerRepository.swift */,
+				A1D07D36267C4FAF0038CC04 /* EventRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -810,6 +833,7 @@
 				A1EA493D267A4670002B89B8 /* LaunchScreen.storyboard in Resources */,
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
 				A1CB6D5F267B9D790040ACC4 /* ProfileViewController.xib in Resources */,
+				A1D07CE9267C42050038CC04 /* CreateEventViewController.xib in Resources */,
 				A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */,
 				A1CB6D55267B9C700040ACC4 /* RegistrationListViewController.xib in Resources */,
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
@@ -947,6 +971,7 @@
 				A1EA49DC267A60FC002B89B8 /* SeekerRepository.swift in Sources */,
 				A1CB6CFC267B8A850040ACC4 /* HomeCreatorTabBarViewController.swift in Sources */,
 				A1CB6D1A267B8D2B0040ACC4 /* CreatorRepository.swift in Sources */,
+				A1D07D37267C4FAF0038CC04 /* EventRepository.swift in Sources */,
 				A1EA49EB267A6190002B89B8 /* RegisterEnum.swift in Sources */,
 				A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */,
 				A1CB6D5E267B9D790040ACC4 /* ProfileViewController.swift in Sources */,
@@ -954,6 +979,7 @@
 				A1CB6D2D267B91120040ACC4 /* CreatorFactory.swift in Sources */,
 				A1CB6D35267B993B0040ACC4 /* MenuService.swift in Sources */,
 				A1CB6D15267B8CA70040ACC4 /* Creator.swift in Sources */,
+				A1D07CE8267C42050038CC04 /* CreateEventViewController.swift in Sources */,
 				A1CB6D0B267B8AF50040ACC4 /* HomeCreatorViewController.swift in Sources */,
 				A1EA49B5267A4B2B002B89B8 /* LoginViewController.swift in Sources */,
 				A1EA49BE267A4B49002B89B8 /* RegisterViewController.swift in Sources */,
@@ -980,11 +1006,13 @@
 				A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */,
 				A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */,
 				A1EA4A20267A778B002B89B8 /* HomeTabBarViewController.swift in Sources */,
+				A1D07CF6267C4CCE0038CC04 /* CreateEventEnum.swift in Sources */,
 				A1CD05C1267BC2430033ACED /* UpdateProfileEnum.swift in Sources */,
 				A1CB6D94267BB76C0040ACC4 /* UIScrollView+Ext.swift in Sources */,
 				A1CB6D75267BA7FB0040ACC4 /* UIView+Ext.swift in Sources */,
 				A1EA49CD267A5553002B89B8 /* UIApplication+Ext.swift in Sources */,
 				A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */,
+				A1D07CF1267C4BE90038CC04 /* CreateEventViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
