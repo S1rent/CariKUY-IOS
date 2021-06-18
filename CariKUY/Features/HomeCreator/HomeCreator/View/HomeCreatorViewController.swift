@@ -6,8 +6,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeCreatorViewController: UIViewController {
+    
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var initView: UIView!
+    
+    let viewModel = HomeCreatorViewModel()
+    let loadTrigger = PublishRelay<Void>()
 
     let changeTitle: ((_ title: String) -> Void)
     
@@ -25,10 +33,49 @@ class HomeCreatorViewController: UIViewController {
         super.viewWillAppear(animated)
         self.changeTitle("Home")
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.loadTrigger.accept(())
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
+        bindUI()
+    }
+    
+    func bindUI() {
+        let output = viewModel.transform(
+            input: HomeCreatorViewModel.Input(
+                loadTrigger: self.loadTrigger.asDriverOnErrorJustComplete()
+            )
+        )
+        
+        self.rx.disposeBag.insert(
+            output.data.drive(onNext: { [weak self] data in
+                guard let self = self else { return }
+                
+                self.setData(data)
+            })
+        )
+    }
+    
+    func setData(_ eventList: [EventModel]) {
+        for event in eventList {
+            let itemView = EventItemView()
+            itemView.imgCamera.sd_setImage(with: URL(string: event.eventPicture), placeholderImage: UIImage(systemName: "camera"))
+            itemView.labelTitle.text = event.eventName
+            itemView.labelType.text = event.eventType
+            itemView.labelDate.text = event.eventDate
+            self.stackView.addArrangedSubview(itemView)
+            itemView.snp.makeConstraints { make in
+                make.leading.equalToSuperview()
+                make.trailing.equalToSuperview()
+            }
+        }
+    }
+    
+    func setupView() {
+        self.stackView.safelyRemoveAllArrangedSubviews()
     }
 
 }

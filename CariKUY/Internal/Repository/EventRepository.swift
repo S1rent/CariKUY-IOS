@@ -38,35 +38,37 @@ class EventRepository {
         return CreateEventEnum.success
     }
     
-//    func getSeekersByEmail(email: String) -> [Seeker] {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//
-//        var seekerList: [Seeker] = []
-//        let query = NSFetchRequest<NSFetchRequestResult>(entityName: SeekerEntityKey.entityName.rawValue)
-//        query.predicate = NSPredicate(format: "seekerEmail = %@", email)
-//
-//        do {
-//            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return [] }
-//
-//            result.forEach { user in
-//                let model = Seeker(
-//                    id: user.value(forKey: SeekerEntityKey.id.rawValue) as? String ?? "", email: user.value(forKey: SeekerEntityKey.email.rawValue) as? String ?? "",
-//                    password: user.value(forKey: SeekerEntityKey.password.rawValue) as? String ?? "",
-//                    name: user.value(forKey: SeekerEntityKey.name.rawValue) as? String ?? "-",
-//                    description: user.value(forKey: SeekerEntityKey.description.rawValue) as? String ?? "-",
-//                    profilePicture: user.value(forKey: SeekerEntityKey.profilePicture.rawValue) as? String ?? "-", birthDate: user.value(forKey: SeekerEntityKey.birthDate.rawValue) as? String ?? "-",
-//                    gender: user.value(forKey: SeekerEntityKey.gender.rawValue) as? String ?? "-",
-//                    phoneNumber: user.value(forKey: SeekerEntityKey.phoneNumber.rawValue) as? String ?? "-"
-//                )
-//                seekerList.append(model)
-//            }
-//        } catch {
-//            return []
-//        }
-//
-//        return seekerList
-//    }
+    func getEventListByCreatorID(creatorID: String) -> [EventModel] {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        var eventList: [EventModel] = []
+        let query = NSFetchRequest<NSFetchRequestResult>(entityName: "Event")
+        query.predicate = NSPredicate(format: "creatorID = %@", creatorID)
+
+        do {
+            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return [] }
+
+            result.forEach { user in
+                let model = EventModel(
+                    eventID: user.value(forKey: "eventID") as? String ?? "",
+                    creatorID: user.value(forKey: "creatorID") as? String ?? "",
+                    eventName: user.value(forKey: "eventName") as? String ?? "",
+                    eventDate: user.value(forKey: "eventDate") as? String ?? "",
+                    eventDesc: user.value(forKey: "eventDescription") as? String ?? "",
+                    eventType: user.value(forKey: "eventType") as? String ?? "",
+                    eventPicture: user.value(forKey: "eventPictureURL") as? String ?? "",
+                    eventReq: user.value(forKey: "eventRequirement") as? String ?? ""
+                )
+                
+                eventList.append(model)
+            }
+        } catch {
+            return []
+        }
+
+        return eventList
+    }
 //
 //    func editSeeker(userData: Seeker) -> UpdateProfileEnum {
 //        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .errorFatal }

@@ -42,6 +42,10 @@
 		A1D07CF1267C4BE90038CC04 /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07CF0267C4BE90038CC04 /* CreateEventViewModel.swift */; };
 		A1D07CF6267C4CCE0038CC04 /* CreateEventEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07CF5267C4CCE0038CC04 /* CreateEventEnum.swift */; };
 		A1D07D37267C4FAF0038CC04 /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07D36267C4FAF0038CC04 /* EventRepository.swift */; };
+		A1D07D3D267C56270038CC04 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07D3C267C56270038CC04 /* EventModel.swift */; };
+		A1D07D43267C56A40038CC04 /* EventItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07D42267C56A40038CC04 /* EventItemView.swift */; };
+		A1D07D48267C56CF0038CC04 /* EventItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D07D47267C56CF0038CC04 /* EventItemView.xib */; };
+		A1D07D4D267C5B0B0038CC04 /* HomeCreatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D07D4C267C5B0B0038CC04 /* HomeCreatorViewModel.swift */; };
 		A1EA492E267A466F002B89B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492D267A466F002B89B8 /* AppDelegate.swift */; };
 		A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA492F267A466F002B89B8 /* SceneDelegate.swift */; };
 		A1EA4938267A466F002B89B8 /* CariKUY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1EA4936267A466F002B89B8 /* CariKUY.xcdatamodeld */; };
@@ -130,6 +134,10 @@
 		A1D07CF0267C4BE90038CC04 /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
 		A1D07CF5267C4CCE0038CC04 /* CreateEventEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventEnum.swift; sourceTree = "<group>"; };
 		A1D07D36267C4FAF0038CC04 /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		A1D07D3C267C56270038CC04 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		A1D07D42267C56A40038CC04 /* EventItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItemView.swift; sourceTree = "<group>"; };
+		A1D07D47267C56CF0038CC04 /* EventItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventItemView.xib; sourceTree = "<group>"; };
+		A1D07D4C267C5B0B0038CC04 /* HomeCreatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCreatorViewModel.swift; sourceTree = "<group>"; };
 		A1EA492A267A466F002B89B8 /* CariKUY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CariKUY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EA492D267A466F002B89B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EA492F267A466F002B89B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +247,7 @@
 		A1CB6D06267B8AD30040ACC4 /* HomeCreator */ = {
 			isa = PBXGroup;
 			children = (
+				A1D07D3B267C561F0038CC04 /* Model */,
 				A1CB6D07267B8ADA0040ACC4 /* View */,
 				A1CB6D08267B8ADE0040ACC4 /* ViewModel */,
 			);
@@ -248,6 +257,7 @@
 		A1CB6D07267B8ADA0040ACC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1D07D41267C56940038CC04 /* Item */,
 				A1CB6D09267B8AF50040ACC4 /* HomeCreatorViewController.swift */,
 				A1CB6D0A267B8AF50040ACC4 /* HomeCreatorViewController.xib */,
 			);
@@ -257,6 +267,7 @@
 		A1CB6D08267B8ADE0040ACC4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A1D07D4C267C5B0B0038CC04 /* HomeCreatorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -384,6 +395,23 @@
 				A1D07CF5267C4CCE0038CC04 /* CreateEventEnum.swift */,
 			);
 			path = CreateEvent;
+			sourceTree = "<group>";
+		};
+		A1D07D3B267C561F0038CC04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1D07D3C267C56270038CC04 /* EventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1D07D41267C56940038CC04 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				A1D07D42267C56A40038CC04 /* EventItemView.swift */,
+				A1D07D47267C56CF0038CC04 /* EventItemView.xib */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		A1EA4921267A466F002B89B8 = {
@@ -835,6 +863,7 @@
 				A1CB6D5F267B9D790040ACC4 /* ProfileViewController.xib in Resources */,
 				A1D07CE9267C42050038CC04 /* CreateEventViewController.xib in Resources */,
 				A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */,
+				A1D07D48267C56CF0038CC04 /* EventItemView.xib in Resources */,
 				A1CB6D55267B9C700040ACC4 /* RegistrationListViewController.xib in Resources */,
 				A1EA49B6267A4B2B002B89B8 /* LoginViewController.xib in Resources */,
 				A1CB6D0C267B8AF50040ACC4 /* HomeCreatorViewController.xib in Resources */,
@@ -1000,6 +1029,7 @@
 				A1CB6D85267BA9B50040ACC4 /* ProfileModel.swift in Sources */,
 				A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */,
 				A1EA49FF267A6440002B89B8 /* SeekerEntityKey.swift in Sources */,
+				A1D07D3D267C56270038CC04 /* EventModel.swift in Sources */,
 				A1CD05BB267BBDC50033ACED /* UpdateProfileViewModel.swift in Sources */,
 				A1CB6D6D267BA7900040ACC4 /* ProfileItemView.swift in Sources */,
 				A1CB6D54267B9C700040ACC4 /* RegistrationListViewController.swift in Sources */,
@@ -1008,9 +1038,11 @@
 				A1EA4A20267A778B002B89B8 /* HomeTabBarViewController.swift in Sources */,
 				A1D07CF6267C4CCE0038CC04 /* CreateEventEnum.swift in Sources */,
 				A1CD05C1267BC2430033ACED /* UpdateProfileEnum.swift in Sources */,
+				A1D07D43267C56A40038CC04 /* EventItemView.swift in Sources */,
 				A1CB6D94267BB76C0040ACC4 /* UIScrollView+Ext.swift in Sources */,
 				A1CB6D75267BA7FB0040ACC4 /* UIView+Ext.swift in Sources */,
 				A1EA49CD267A5553002B89B8 /* UIApplication+Ext.swift in Sources */,
+				A1D07D4D267C5B0B0038CC04 /* HomeCreatorViewModel.swift in Sources */,
 				A1EA4930267A466F002B89B8 /* SceneDelegate.swift in Sources */,
 				A1D07CF1267C4BE90038CC04 /* CreateEventViewModel.swift in Sources */,
 			);
