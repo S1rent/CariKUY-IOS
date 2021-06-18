@@ -86,7 +86,11 @@ class EventDetailViewController: UIViewController {
             output.participants.drive(onNext: { [weak self] data in
                 guard let self = self else { return }
                 
-                self.setParticipant(data)
+                let user = UserService.shared.getUser()
+                let creator = CreatorRepository.shared.getCreatorsByEmail(email: user?.userEmail ?? "")
+                if creator.count != 0 {
+                    self.setParticipant(data)
+                }
             }),
             self.buttonDelete.rx.tap.asDriver().drive(onNext: { [weak self] _ in
                 guard let self = self else { return }
