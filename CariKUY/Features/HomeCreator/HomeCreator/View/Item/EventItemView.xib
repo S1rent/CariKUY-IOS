@@ -80,17 +80,27 @@
                                 <constraint firstAttribute="bottom" secondItem="01X-nG-Zd1" secondAttribute="bottom" constant="8.5" id="xwG-70-pGc"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-bJ-UwJ">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="270"/>
+                            <connections>
+                                <action selector="viewTapped:" destination="-1" eventType="touchUpInside" id="j0a-LQ-tre"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="SLh-bJ-UwJ" firstAttribute="top" secondItem="aBU-gg-B1t" secondAttribute="top" id="0XS-rV-C9m"/>
                         <constraint firstItem="GA2-wn-Mv0" firstAttribute="top" secondItem="3GL-pQ-JBO" secondAttribute="bottom" id="3e0-at-ErB"/>
                         <constraint firstItem="LPP-Vs-Jzm" firstAttribute="leading" secondItem="aBU-gg-B1t" secondAttribute="leading" id="5v2-Cg-4ZQ"/>
                         <constraint firstItem="GA2-wn-Mv0" firstAttribute="leading" secondItem="aBU-gg-B1t" secondAttribute="leading" id="Gy0-OQ-qCw"/>
                         <constraint firstAttribute="bottom" secondItem="GA2-wn-Mv0" secondAttribute="bottom" id="Jrc-Gq-HfO"/>
                         <constraint firstAttribute="trailing" secondItem="LPP-Vs-Jzm" secondAttribute="trailing" id="Pma-6m-ycB"/>
                         <constraint firstItem="LPP-Vs-Jzm" firstAttribute="top" secondItem="aBU-gg-B1t" secondAttribute="top" id="R6L-uV-qpG"/>
+                        <constraint firstAttribute="trailing" secondItem="SLh-bJ-UwJ" secondAttribute="trailing" id="RHT-Qx-qKz"/>
+                        <constraint firstItem="SLh-bJ-UwJ" firstAttribute="leading" secondItem="aBU-gg-B1t" secondAttribute="leading" id="Sj2-6h-hWF"/>
                         <constraint firstAttribute="trailing" secondItem="3GL-pQ-JBO" secondAttribute="trailing" id="Vfh-av-dM0"/>
                         <constraint firstAttribute="trailing" secondItem="GA2-wn-Mv0" secondAttribute="trailing" id="hMb-NH-joh"/>
+                        <constraint firstAttribute="bottom" secondItem="SLh-bJ-UwJ" secondAttribute="bottom" id="sqZ-RF-qZW"/>
                         <constraint firstItem="3GL-pQ-JBO" firstAttribute="leading" secondItem="aBU-gg-B1t" secondAttribute="leading" id="u9a-7Q-Efa"/>
                         <constraint firstItem="3GL-pQ-JBO" firstAttribute="top" secondItem="LPP-Vs-Jzm" secondAttribute="bottom" id="zMl-0D-2sP"/>
                     </constraints>

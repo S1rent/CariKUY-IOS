@@ -62,7 +62,7 @@ class HomeCreatorViewController: UIViewController {
     func setData(_ eventList: [EventModel]) {
         self.stackView.safelyRemoveAllArrangedSubviews()
         for event in eventList {
-            let itemView = EventItemView()
+            let itemView = EventItemView(data: event, callBack: self.navigateToEventDetail)
             itemView.imgCamera.sd_setImage(with: URL(string: event.eventPicture), placeholderImage: UIImage(systemName: "camera"))
             itemView.labelTitle.text = event.eventName
             itemView.labelType.text = event.eventType
@@ -77,6 +77,11 @@ class HomeCreatorViewController: UIViewController {
     
     func setupView() {
         self.stackView.safelyRemoveAllArrangedSubviews()
+    }
+    
+    func navigateToEventDetail(_ eventData: EventModel) {
+        let viewController = EventDetailViewController(data: eventData)
+        UIApplication.topViewController()?.navigationController?.pushViewController(viewController, animated: true)
     }
 
 }

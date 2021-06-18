@@ -18,7 +18,12 @@ class EventItemView: UIView {
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var bottomView: UIView!
     
-    init() {
+    let data: EventModel
+    let callBack: ((_ eventData: EventModel) -> Void)
+    
+    init(data: EventModel, callBack: @escaping ((_ eventData: EventModel) -> Void)) {
+        self.data = data
+        self.callBack = callBack
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         
         self.bindNib()
@@ -49,6 +54,9 @@ class EventItemView: UIView {
         bottomView.clipsToBounds = true
         bottomView.layer.cornerRadius = 6
         bottomView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    }
+    @IBAction func viewTapped(_ sender: Any) {
+        self.callBack(self.data)
     }
 }
 
