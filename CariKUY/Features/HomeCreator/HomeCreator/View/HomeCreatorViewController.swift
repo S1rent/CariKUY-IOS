@@ -60,6 +60,7 @@ class HomeCreatorViewController: UIViewController {
     }
     
     func setData(_ eventList: [EventModel]) {
+        self.stackView.safelyRemoveAllArrangedSubviews()
         for event in eventList {
             let itemView = EventItemView()
             itemView.imgCamera.sd_setImage(with: URL(string: event.eventPicture), placeholderImage: UIImage(systemName: "camera"))

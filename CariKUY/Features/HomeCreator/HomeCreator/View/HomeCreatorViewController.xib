@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4C-Te-qkL">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Events" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0u-N9-SIZ">
                                     <rect key="frame" x="16" y="16" width="382" height="29"/>
@@ -34,7 +34,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zDp-K6-dYm">
-                                    <rect key="frame" x="0.0" y="61" width="414" height="1"/>
+                                    <rect key="frame" x="0.0" y="45" width="414" height="1"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaM-h6-qhF">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
@@ -60,7 +60,7 @@
                                 <constraint firstItem="zDp-K6-dYm" firstAttribute="leading" secondItem="S4C-Te-qkL" secondAttribute="leading" id="TeS-T6-J9W"/>
                                 <constraint firstItem="Z0u-N9-SIZ" firstAttribute="top" secondItem="S4C-Te-qkL" secondAttribute="top" constant="16" id="hFM-hd-kic"/>
                                 <constraint firstAttribute="trailing" secondItem="zDp-K6-dYm" secondAttribute="trailing" id="n8K-5b-TOk"/>
-                                <constraint firstItem="zDp-K6-dYm" firstAttribute="top" secondItem="Z0u-N9-SIZ" secondAttribute="bottom" constant="16" id="uz7-f3-RRs"/>
+                                <constraint firstItem="zDp-K6-dYm" firstAttribute="top" secondItem="Z0u-N9-SIZ" secondAttribute="bottom" id="uz7-f3-RRs"/>
                             </constraints>
                         </view>
                     </subviews>

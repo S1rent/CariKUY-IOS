@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBU-gg-B1t">
-                    <rect key="frame" x="16" y="16" width="382" height="270"/>
+                    <rect key="frame" x="16" y="8" width="382" height="270"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPP-Vs-Jzm" userLabel="Header View">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="53.5"/>
@@ -99,9 +99,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="aBU-gg-B1t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="4Oj-H6-9UX"/>
-                <constraint firstAttribute="bottom" secondItem="aBU-gg-B1t" secondAttribute="bottom" id="7rX-Jj-12N"/>
+                <constraint firstAttribute="bottom" secondItem="aBU-gg-B1t" secondAttribute="bottom" constant="8" id="7rX-Jj-12N"/>
                 <constraint firstAttribute="trailing" secondItem="aBU-gg-B1t" secondAttribute="trailing" constant="16" id="Tas-O4-e7h"/>
-                <constraint firstItem="aBU-gg-B1t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="cxE-vt-F2z"/>
+                <constraint firstItem="aBU-gg-B1t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="cxE-vt-F2z"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="63.768115942028992" y="94.754464285714278"/>
