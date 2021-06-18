@@ -58,7 +58,7 @@ class CreateEventViewController: UIViewController {
         
         pictureTrigger.accept("")
         requirementTrigger.accept("")
-        dateTrigger.accept("")
+        dateTrigger.accept("\(Date().formatDate(format: "dd MMMM yyyy"))")
         nameTrigger.accept("")
         descriptionTrigger.accept("")
         typeTrigger.accept("")
