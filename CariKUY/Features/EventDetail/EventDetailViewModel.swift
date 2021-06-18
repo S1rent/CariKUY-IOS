@@ -12,10 +12,12 @@ import RxCocoa
 final class EventDetailViewModel {
     struct Input {
         let loadTrigger: Driver<Void>
+        let participateTrigger: Driver<Void>
     }
     
     struct Output {
         let creatorData: Driver<[User]>
+        let successParticipate: Driver<(ParticipationEnum, Bool)>
     }
     
     let data: EventModel
@@ -30,8 +32,28 @@ final class EventDetailViewModel {
             return Driver.just(creator)
         }
         
+        let successParticipates = input.participateTrigger.flatMapLatest { _ -> Driver<(ParticipationEnum, Bool)> in
+            
+            var isRegistered = false
+            let user = UserService.shared.getUser()
+            let participationList = ParticipationRepository.shared.getParticipationListBySeekerID(id: user?.userID ?? "")
+            
+            for participation in participationList {
+                if participation.eventID == self.data.eventID {
+                    isRegistered = true
+                }
+            }
+            
+            if !isRegistered {
+                return Driver.just((ParticipationRepository.shared.createParticipation(eventID: self.data.eventID, isAccepted: 0, seekerID: user?.userID ?? ""), true))
+            } else {
+                return Driver.just((ParticipationRepository.shared.deleteParticipation(eventID: self.data.eventID, seekerID: user?.userID ?? ""), false))
+            }
+        }
+        
         return Output(
-            creatorData: creatorData
+            creatorData: creatorData,
+            successParticipate: successParticipates
         )
     }
     

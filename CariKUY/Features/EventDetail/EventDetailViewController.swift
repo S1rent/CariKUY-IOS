@@ -55,7 +55,8 @@ class EventDetailViewController: UIViewController {
     }
     
     private func bindUI() {
-        let output = viewModel.transform(input: EventDetailViewModel.Input(loadTrigger: self.loadTrigger.asDriverOnErrorJustComplete()))
+        let output = viewModel.transform(input: EventDetailViewModel.Input(loadTrigger: self.loadTrigger.asDriverOnErrorJustComplete(), participateTrigger: self.buttonRegister.rx.tap.asDriverOnErrorJustComplete()
+        ))
         
         self.rx.disposeBag.insert(
             output.creatorData.drive(onNext: { [weak self] data in
@@ -65,6 +66,21 @@ class EventDetailViewController: UIViewController {
                     self.labelCreatorName.text = data[0].userName
                     self.textViewCreatorDescription.text = data[0].userDescription
                     self.imgCreatorPicture.sd_setImage(with: URL(string: data[0].userProfilePicture), placeholderImage: #imageLiteral(resourceName: "ic-user"))
+                }
+            }),
+            output.successParticipate.drive(onNext: { [weak self] success in
+                guard let self = self else { return }
+                let user = UserService.shared.getUser()
+                if success.0 == .success {
+                    if success.1 {
+                        self.presentPopUp(title: "Information", message: "Success\nWe will send you a proper invitation to your email (\(user?.userEmail ?? "")).", actions: [UIAlertAction(title: "OK", style: .default, handler: nil)], completion: nil)
+                        self.buttonRegister.setTitle("Cancel Participation", for: .normal)
+                        self.buttonRegister.backgroundColor = UIColor.red
+                    } else {
+                        self.presentPopUp(title: "Information", message: "Success.", actions: [UIAlertAction(title: "OK", style: .default, handler: nil)], completion: nil)
+                        self.buttonRegister.setTitle("Participate", for: .normal)
+                        self.buttonRegister.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7490196078, blue: 0.1411764706, alpha: 1)
+                    }
                 }
             })
         )
@@ -106,6 +122,19 @@ class EventDetailViewController: UIViewController {
             self.labelParticipants.snp.remakeConstraints { remake in
                 remake.height.equalTo(0)
             }
+            
+            let results = ParticipationRepository.shared.getParticipationListBySeekerID(id: user?.userID ?? "")
+            
+            for result in results {
+                if result.eventID == self.data.eventID {
+                    self.buttonRegister.setTitle("Cancel Participation", for: .normal)
+                    self.buttonRegister.backgroundColor = UIColor.red
+                    return
+                }
+            }
+            self.buttonRegister.setTitle("Participate", for: .normal)
+            self.buttonRegister.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7490196078, blue: 0.1411764706, alpha: 1)
+            
         } else if role == 1 && self.data.creatorID == (user?.userID ?? "") {
             self.registerView.isHidden = true
             self.buttonEdit.layer.cornerRadius = 6

@@ -70,7 +70,7 @@ class MenuService {
     
     func getSeekerRegistrationListViewController() -> UIViewController {
         if let callback = self.callBack {
-            let viewController = HomeViewController(callback: callback)
+            let viewController = MyParticipationViewController(callback: callback)
             
             viewController.tabBarItem = UITabBarItem(title: "My Registration", image: UIImage(systemName: "list.bullet"), tag: 0)
             viewController.tabBarItem.imageInsets = UIEdgeInsets.init(top: -5, left: -5, bottom: -5, right: -5)

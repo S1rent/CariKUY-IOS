@@ -12,6 +12,12 @@
 		A114A371267C81A300D1A1CC /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A36F267C81A300D1A1CC /* HomeCollectionViewCell.swift */; };
 		A114A372267C81A300D1A1CC /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A370267C81A300D1A1CC /* HomeCollectionViewCell.xib */; };
 		A114A37A267C83F400D1A1CC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A379267C83F400D1A1CC /* HomeViewModel.swift */; };
+		A114A37F267C961A00D1A1CC /* ParticipationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A37E267C961A00D1A1CC /* ParticipationRepository.swift */; };
+		A114A384267C96C900D1A1CC /* ParticipationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A383267C96C900D1A1CC /* ParticipationEnum.swift */; };
+		A114A38C267C97B300D1A1CC /* ParticipationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A38B267C97B300D1A1CC /* ParticipationModel.swift */; };
+		A114A393267C9EC200D1A1CC /* MyParticipationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A391267C9EC200D1A1CC /* MyParticipationViewController.swift */; };
+		A114A394267C9EC200D1A1CC /* MyParticipationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A114A392267C9EC200D1A1CC /* MyParticipationViewController.xib */; };
+		A114A39D267C9F3F00D1A1CC /* MyParticipationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A114A39C267C9F3F00D1A1CC /* MyParticipationViewModel.swift */; };
 		A1CB6BF9267B43DA0040ACC4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BF8267B43DA0040ACC4 /* UserService.swift */; };
 		A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */; };
 		A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */; };
@@ -110,6 +116,12 @@
 		A114A36F267C81A300D1A1CC /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A114A370267C81A300D1A1CC /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		A114A379267C83F400D1A1CC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A114A37E267C961A00D1A1CC /* ParticipationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipationRepository.swift; sourceTree = "<group>"; };
+		A114A383267C96C900D1A1CC /* ParticipationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipationEnum.swift; sourceTree = "<group>"; };
+		A114A38B267C97B300D1A1CC /* ParticipationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipationModel.swift; sourceTree = "<group>"; };
+		A114A391267C9EC200D1A1CC /* MyParticipationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParticipationViewController.swift; sourceTree = "<group>"; };
+		A114A392267C9EC200D1A1CC /* MyParticipationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyParticipationViewController.xib; sourceTree = "<group>"; };
+		A114A39C267C9F3F00D1A1CC /* MyParticipationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParticipationViewModel.swift; sourceTree = "<group>"; };
 		A1CB6BF8267B43DA0040ACC4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		A1CB6BFD267B43F50040ACC4 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
 		A1CB6C24267B52F30040ACC4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -220,6 +232,16 @@
 				A114A370267C81A300D1A1CC /* HomeCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		A114A390267C9EAD00D1A1CC /* MyParticipation */ = {
+			isa = PBXGroup;
+			children = (
+				A114A391267C9EC200D1A1CC /* MyParticipationViewController.swift */,
+				A114A392267C9EC200D1A1CC /* MyParticipationViewController.xib */,
+				A114A39C267C9F3F00D1A1CC /* MyParticipationViewModel.swift */,
+			);
+			path = MyParticipation;
 			sourceTree = "<group>";
 		};
 		A1CB6BF7267B43BF0040ACC4 /* Service */ = {
@@ -442,6 +464,8 @@
 				A1D07D52267C61700038CC04 /* EventDetailViewController.swift */,
 				A1D07D53267C61700038CC04 /* EventDetailViewController.xib */,
 				A1D07D5C267C6C610038CC04 /* EventDetailViewModel.swift */,
+				A114A383267C96C900D1A1CC /* ParticipationEnum.swift */,
+				A114A38B267C97B300D1A1CC /* ParticipationModel.swift */,
 			);
 			path = EventDetail;
 			sourceTree = "<group>";
@@ -501,6 +525,7 @@
 		A1EA498A267A4994002B89B8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A114A390267C9EAD00D1A1CC /* MyParticipation */,
 				A1D07D51267C61610038CC04 /* EventDetail */,
 				A1D07CE5267C41F30038CC04 /* CreateEvent */,
 				A1EA4A2E267A7938002B89B8 /* HomeSeeker */,
@@ -640,8 +665,9 @@
 			isa = PBXGroup;
 			children = (
 				A1CB6D19267B8D2B0040ACC4 /* CreatorRepository.swift */,
-				A1EA49DB267A60FC002B89B8 /* SeekerRepository.swift */,
 				A1D07D36267C4FAF0038CC04 /* EventRepository.swift */,
+				A114A37E267C961A00D1A1CC /* ParticipationRepository.swift */,
+				A1EA49DB267A60FC002B89B8 /* SeekerRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -896,6 +922,7 @@
 				A1EA493A267A4670002B89B8 /* Assets.xcassets in Resources */,
 				A1CB6D5F267B9D790040ACC4 /* ProfileViewController.xib in Resources */,
 				A1D07CE9267C42050038CC04 /* CreateEventViewController.xib in Resources */,
+				A114A394267C9EC200D1A1CC /* MyParticipationViewController.xib in Resources */,
 				A1EA4A34267A7949002B89B8 /* HomeViewController.xib in Resources */,
 				A1D07D48267C56CF0038CC04 /* EventItemView.xib in Resources */,
 				A1CB6D55267B9C700040ACC4 /* RegistrationListViewController.xib in Resources */,
@@ -1033,10 +1060,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1CB6D01267B8AA70040ACC4 /* HomeCreatorTabBarViewModel.swift in Sources */,
+				A114A37F267C961A00D1A1CC /* ParticipationRepository.swift in Sources */,
 				A1EA49DC267A60FC002B89B8 /* SeekerRepository.swift in Sources */,
 				A1CB6CFC267B8A850040ACC4 /* HomeCreatorTabBarViewController.swift in Sources */,
 				A1CB6D1A267B8D2B0040ACC4 /* CreatorRepository.swift in Sources */,
 				A1D07D37267C4FAF0038CC04 /* EventRepository.swift in Sources */,
+				A114A384267C96C900D1A1CC /* ParticipationEnum.swift in Sources */,
 				A1EA49EB267A6190002B89B8 /* RegisterEnum.swift in Sources */,
 				A1CB6C25267B52F30040ACC4 /* LoginViewModel.swift in Sources */,
 				A1CB6D5E267B9D790040ACC4 /* ProfileViewController.swift in Sources */,
@@ -1064,8 +1093,11 @@
 				A1EA49F1267A6253002B89B8 /* Seeker.swift in Sources */,
 				A1EA49F9267A627E002B89B8 /* User.swift in Sources */,
 				A1EA4A1A267A70DA002B89B8 /* ObservableType+Ext.swift in Sources */,
+				A114A39D267C9F3F00D1A1CC /* MyParticipationViewModel.swift in Sources */,
 				A114A371267C81A300D1A1CC /* HomeCollectionViewCell.swift in Sources */,
+				A114A38C267C97B300D1A1CC /* ParticipationModel.swift in Sources */,
 				A1CB6BFE267B43F50040ACC4 /* AuthenticatedUser.swift in Sources */,
+				A114A393267C9EC200D1A1CC /* MyParticipationViewController.swift in Sources */,
 				A1CB6D85267BA9B50040ACC4 /* ProfileModel.swift in Sources */,
 				A1EA4A15267A6B45002B89B8 /* RegisterViewModel.swift in Sources */,
 				A1EA49FF267A6440002B89B8 /* SeekerEntityKey.swift in Sources */,
