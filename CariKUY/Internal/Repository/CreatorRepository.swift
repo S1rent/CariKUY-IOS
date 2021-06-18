@@ -65,6 +65,35 @@ class CreatorRepository {
         return creatorList
     }
     
+    func getCreatorsByID(id: String) -> [Creator] {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return [] }
+        let managedContext = appDelegate.persistentContainer.viewContext
+ 
+        var creatorList: [Creator] = []
+        let query = NSFetchRequest<NSFetchRequestResult>(entityName: CreatorEntityKey.entityName.rawValue)
+        query.predicate = NSPredicate(format: "creatorID = %@", id)
+        
+        do {
+            guard let result = try managedContext.fetch(query) as? [NSManagedObject] else { return [] }
+            
+            result.forEach { user in
+                let model = Creator(
+                    id: user.value(forKey: CreatorEntityKey.id.rawValue) as? String ?? "",
+                    email: user.value(forKey: CreatorEntityKey.email.rawValue) as? String ?? "",
+                    password: user.value(forKey: CreatorEntityKey.password.rawValue) as? String ?? "",
+                    name: user.value(forKey: CreatorEntityKey.name.rawValue) as? String ?? "-",
+                    description: user.value(forKey: CreatorEntityKey.description.rawValue) as? String ?? "-",
+                    profilePicture: user.value(forKey: CreatorEntityKey.profilePicture.rawValue) as? String ?? "-"
+                )
+                creatorList.append(model)
+            }
+        } catch {
+            return []
+        }
+        
+        return creatorList
+    }
+    
     func editCreator(userData: Creator) -> UpdateProfileEnum {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .errorFatal }
         let managedContext = appDelegate.persistentContainer.viewContext

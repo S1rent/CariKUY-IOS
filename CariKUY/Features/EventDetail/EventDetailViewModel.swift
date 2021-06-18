@@ -15,11 +15,23 @@ final class EventDetailViewModel {
     }
     
     struct Output {
-        
+        let creatorData: Driver<[User]>
+    }
+    
+    let data: EventModel
+    init(data: EventModel) {
+        self.data = data
     }
     
     public func transform(input: Input) -> Output {
+        let creatorData = input.loadTrigger.flatMapLatest { _ -> Driver<[User]> in
+            let creator = CreatorRepository.shared.getCreatorsByID(id: self.data.creatorID)
+            
+            return Driver.just(creator)
+        }
+        
         return Output(
+            creatorData: creatorData
         )
     }
     

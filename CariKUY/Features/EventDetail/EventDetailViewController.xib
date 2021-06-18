@@ -16,6 +16,7 @@
                 <outlet property="buttonRegister" destination="LMC-0l-kzg" id="5g4-gR-yTs"/>
                 <outlet property="creatorActionView" destination="lpw-lM-AM2" id="lSz-qC-ruk"/>
                 <outlet property="creatorView" destination="UFk-k4-U4k" id="GNO-KX-SuJ"/>
+                <outlet property="imgCreatorPicture" destination="XQs-lF-ul2" id="Ovy-1i-iRC"/>
                 <outlet property="imgEventPicture" destination="yA4-Bn-dLE" id="5wD-Fa-chv"/>
                 <outlet property="labelCreatorName" destination="pJL-ne-cPE" id="mb2-hd-xbJ"/>
                 <outlet property="labelEventDate" destination="bpA-nM-qyx" id="qLK-ii-n6i"/>
@@ -235,7 +236,7 @@
                                                     <rect key="frame" x="199" y="0.0" width="183" height="50"/>
                                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <state key="normal" title="Participate">
+                                                    <state key="normal" title="Delete">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
